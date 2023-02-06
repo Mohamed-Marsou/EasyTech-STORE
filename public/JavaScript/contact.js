@@ -1,29 +1,6 @@
-const buttons = document.querySelectorAll("[data-carousel-button]");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    let offset = btn.dataset.carouselButton;
-    const slides = btn
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]");
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide);
-    buttons.forEach((button) => {
-      button.classList.remove("active_btn");
-    });
-
-    btn.classList.add("active_btn");
-
-    if (offset == newIndex) return;
-    newIndex = offset;
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-  });
-});
-
 // NAV BAR SEARCH
 const searchBarIcon = document.getElementById("search_icon");
-const OverlaySection = document.getElementById("Hero__carousel");
+const OverlaySection = document.getElementById("map");
 const searchBarContainer = document.querySelector(
   ".resp__serach__barContainer"
 );
@@ -40,8 +17,22 @@ OverlaySection.addEventListener("click", () => {
     clicked = false;
   }
 });
-// DARK MODE
 
+// LEAFLET
+var map = L.map("map", { scrollWheelZoom: false }).setView(
+  [35.7595, -5.834],
+  13
+);
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+var marker = L.marker([35.7595, -5.834], { alt: "TechJoy" })
+  .addTo(map) // "Kyiv" is the accessible name of this marker
+  .bindPopup("Visit us at TechJoy!");
+
+// DARK MOODE
 const darkMode = document.getElementById("darkMode");
 darkMode.addEventListener("click", () => {
   document.documentElement.style.setProperty(

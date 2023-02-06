@@ -21,6 +21,7 @@
     ></script>
     <!--* CSS -->
     <link rel="stylesheet" href="./public/css/index.css" />
+    <link rel="stylesheet" href="./public/css/indexDark.css" />
     <script src="./public/JavaScript/index.js" defer></script>
     <title>EasyTech</title>
   </head>
@@ -37,14 +38,15 @@
             placeholder="Search for a product ...."
           />
           <button type="submit">
-            <span class="material-symbols-outlined"> search </span>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
       </div>
       <div class="header_icons">
-        <i class="fa-regular fa-moon"></i>
+        <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        <i class="fa-regular fa-moon" id="darkMode"></i>
         <a href="#">
-          <span class="material-symbols-outlined"> favorite </span>
+          <span class="material-symbols-outlined" id="favIcon"> favorite </span>
         </a>
         <a href="">
           <i class="fa-regular fa-user"></i>
@@ -57,12 +59,24 @@
             </span>
           </a>
           <a href="#">
-            <h6>0000 $</h6>
+            <h6 id="cushs">0000 $</h6>
           </a>
         </div>
       </div>
-    </nav>
 
+      <div class="resp__serach__barContainer">
+        <form action="#" method="post">
+          <input
+            type="search"
+            id="resp__serach__bar"
+            placeholder="Looking for something..."
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass" id="searchBar_btn"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
     <section id="Hero__carousel">
       <div class="carousel" data-carousel>
         <div class="carousel__btns">
@@ -81,10 +95,7 @@
               >
               <a href="#"> ADD TO CART</a>
             </div>
-            <img
-              src="https://images-fe.ssl-images-amazon.com/images/I/41vjtX23TBL._AC_SX368_.jpg"
-              alt=""
-            />
+            <img src="./public/images/testProduct/docch.jpg" alt="" />
           </li>
           <li class="slide sl2">
             <div class="slide_details">
@@ -110,7 +121,7 @@
               <a href="#"> ADD TO CART</a>
             </div>
             <img
-              src="https://m.media-amazon.com/images/I/313vjNMPw3L.jpg"
+              src="./public/images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
               alt=""
             />
           </li>
@@ -132,7 +143,7 @@
       <div class="category">
         <img src="./public/images/LAPTOPS.jpg" alt="" />
         <div class="category__link">
-          <p>YOUR <span>DREAMS GAMING</span> PC IS HERE ONLY FOR 799$</p>
+          <p>YOUR <span>DREAMS GAMING</span> PC IS HERE ONLY FORM 799$</p>
           <a href="#">
             CHECK OUT
             <i class="fa-solid fa-caret-right"></i>
@@ -143,6 +154,16 @@
         <img src="./public/images/71aB8k8YYHL.jpg" alt="" />
         <div class="category__link">
           <p>LOOKING FOR THE BEST, <span>LOOK NO MORE</span></p>
+          <a href="#">
+            CHECK OUT
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="category respoCate">
+        <img src="./public/images/images.jfif" alt="" />
+        <div class="category__link">
+          <p>WINDOWS 10 PRO, <span>LESS THEN 10$</span></p>
           <a href="#">
             CHECK OUT
             <i class="fa-solid fa-caret-right"></i>
@@ -762,6 +783,8 @@
         </div>
         <h4>Contact information</h4>
         <p>Tangeir cp90000</p>
+        <h3><a href="#">Customer service</a></h3>
+        <h3><a href="#">General</a></h3>
         <div class="social_media_icons">
           <i class="fa-brands fa-instagram" style="color: orange"></i>
           <i class="fa-brands fa-linkedin" style="color: rgb(0, 140, 255)"></i>
@@ -772,19 +795,18 @@
           <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 60)"></i>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper disp">
         <h4>Customer service</h4>
         <a href="">My account</a>
         <a href="">FAQS</a>
-        <a href="">Contact us </a>
+        <a href="contact.html">Contact us </a>
       </div>
-      <div class="wrapper">
+      <div class="wrapper disp">
         <h4>General</h4>
         <a href="">Who are we?</a>
         <a href="">Terms of Sales</a>
         <a href="">Why EasyTech</a>
         <a href="">Warranty Conditions</a>
-        <a href="">feedback</a>
       </div>
       <div class="bank_lg">
         <p>

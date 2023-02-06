@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/public/images/logo.png"
+      type="image/x-icon"
+    />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* Leafleat -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="./public/css/contact.css" />
+    <link rel="stylesheet" href="./public/css/contactDark.css" />
+    <script src="./public/JavaScript/contact.js" defer></script>
+    <title>Contact | EasyTech</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#">
+        <img src="./public/images/Easytech.png" alt="LOGO" />
+      </a>
+      <div class="search_bar">
+        <form action="">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search for a product ...."
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div class="header_icons">
+        <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        <i class="fa-regular fa-moon" id="darkMode"></i>
+        <a href="#">
+          <span class="material-symbols-outlined" id="favIcon"> favorite </span>
+        </a>
+        <a href="">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <div class="cartAndSpending">
+          <a href="">
+            <span class="material-symbols-outlined">
+              local_mall
+              <p>0</p>
+            </span>
+          </a>
+          <a href="#">
+            <h6 id="cushs">0000 $</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="resp__serach__barContainer">
+        <form action="#" method="post">
+          <input
+            type="search"
+            id="resp__serach__bar"
+            placeholder="Looking for something..."
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass" id="searchBar_btn"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div class="navigation">
+      <a href="./index.html"><p>Home</p></a>
+      <span class="material-symbols-outlined"> chevron_right </span>
+      <a href="./contact.html"><p>Contact us</p></a>
+    </div>
+    <div id="map"></div>
+
+    <section id="ContactContainer">
+      <div class="formWrapper">
+        <div class="divHeader">
+          <h1>Leave us a Message</h1>
+        </div>
+        <form action="">
+          <div class="nameContainer">
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="First name"
+            />
+            <input
+              type="text"
+              name="lname"
+              id="lname"
+              placeholder="last name"
+            />
+          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+          />
+          <textarea name="msg" id="msg" placeholder="Message"></textarea>
+          <button>Send Message</button>
+        </form>
+      </div>
+      <div class="detailsWrapper">
+        <div class="divHeader">
+          <h1>Our Store</h1>
+        </div>
+        <div class="conatiner">
+          <span>TechJoy store</span>
+          <span>Tangier el madina</span>
+          <span>90000 Morocco</span>
+          <h3>Hours of Operation</h3>
+          <span>Got Questions ? Call us 24/7!</span>
+          <span>(+212) xxx xxx xxx </span>
+          <h3>Careers</h3>
+          <p>If you're interested in employment opportunities at MyTech,</p>
+          <p>please email us.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <img src="./public/images/Easytech.png" alt="LOGO" />
+        <div>
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <p>You have questions ? Call us 24/7!</p>
+            <span>(+212) XXX XXX XXX</span>
+          </div>
+        </div>
+        <h4>Contact information</h4>
+        <p>Tangeir cp90000</p>
+        <h3><a href="#">Customer service</a></h3>
+        <h3><a href="#">General</a></h3>
+        <div class="social_media_icons">
+          <i class="fa-brands fa-instagram" style="color: orange"></i>
+          <i class="fa-brands fa-linkedin" style="color: rgb(0, 140, 255)"></i>
+          <i
+            class="fa-brands fa-square-facebook"
+            style="color: rgb(40, 103, 248)"
+          ></i>
+          <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 60)"></i>
+        </div>
+      </div>
+      <div class="wrapper disp">
+        <h4>Customer service</h4>
+        <a href="">My account</a>
+        <a href="">FAQS</a>
+        <a href="contact.html">Contact us </a>
+      </div>
+      <div class="wrapper disp">
+        <h4>General</h4>
+        <a href="">Who are we?</a>
+        <a href="">Terms of Sales</a>
+        <a href="">Why EasyTech</a>
+        <a href="">Warranty Conditions</a>
+      </div>
+      <div class="bank_lg">
+        <p>
+          <a href="https://github.com/Mohamed-Marsou">MTM - </a>All rights
+          reserved 2023
+        </p>
+        <div>
+          <img src="./public/images/brands/mastercard-2.svg" alt="" />
+          <img src="./public/images/brands/visa.svg" alt="" />
+          <img src="./public/images/brands/paypal-3.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

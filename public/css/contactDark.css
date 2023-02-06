@@ -1,0 +1,47 @@
+:root {
+  --bodyBackgroundColor: white;
+  --textPrimeColor: #555;
+  --containerBackgroundColor: #f5f5f5;
+  --productsBackgroundColor: #eaeaea;
+  --footerBgColor: #f8f8f8;
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+}
+nav .header_icons > a > i,
+nav .header_icons > i,
+nav .header_icons .cartAndSpending > a > span,
+#favIcon,
+nav .header_icons .cartAndSpending h6,
+nav .search_bar form > button > i {
+  color: var(--textPrimeColor);
+}
+nav .search_bar > form > input {
+  background-color: var(--bodyBackgroundColor);
+}
+
+#ContactContainer .divHeader h1,
+#ContactContainer .detailsWrapper > .conatiner > span,
+#ContactContainer .detailsWrapper > .conatiner > p {
+  color: var(--textPrimeColor);
+}
+#ContactContainer .formWrapper form .nameContainer > input,
+#ContactContainer .formWrapper form > input,
+#ContactContainer .formWrapper form > textarea {
+  background-color: var(--containerBackgroundColor);
+  color: var(--textPrimeColor);
+}
+footer {
+  background-color: var(--footerBgColor);
+  color: var(--textPrimeColor);
+}
+footer > .wrapper > div > div > p {
+  color: var(--textPrimeColor);
+}
+footer > .wrapper > a {
+  color: var(--textPrimeColor);
+}
+footer .bank_lg {
+  background-color: var(--productsBackgroundColor);
+}
