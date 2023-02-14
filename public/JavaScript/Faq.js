@@ -1,29 +1,6 @@
-const buttons = document.querySelectorAll("[data-carousel-button]");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    let offset = btn.dataset.carouselButton;
-    const slides = btn
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]");
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide);
-    buttons.forEach((button) => {
-      button.classList.remove("active_btn");
-    });
-
-    btn.classList.add("active_btn");
-
-    if (offset == newIndex) return;
-    newIndex = offset;
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-  });
-});
-
 // NAV BAR SEARCH
 const searchBarIcon = document.getElementById("search_icon");
-const OverlaySection = document.getElementById("Hero__carousel");
+const OverlaySection = document.getElementById("About__header");
 const searchBarContainer = document.querySelector(
   ".resp__serach__barContainer"
 );
@@ -41,6 +18,15 @@ OverlaySection.addEventListener("click", () => {
   }
 });
 
+// Collapsible
+const coll = document.querySelectorAll(".Tpart");
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    let nextSibling = this.nextElementSibling;
+    nextSibling.classList.toggle("activeColl");
+  });
+}
+
 // ------------ DARK MODE
 
 const darkMode = document.getElementById("darkMode");
@@ -51,7 +37,6 @@ if (darkModeOn) {
   darkMode.addEventListener("click", () => {
     localStorage.removeItem("DarkMode");
     location.reload();
-
     document.documentElement.style.setProperty(
       "--bodyBackgroundColor",
       " white"
@@ -72,7 +57,6 @@ if (!darkModeOn) {
   darkMode.addEventListener("click", () => {
     localStorage.setItem("DarkMode", true);
     location.reload();
-
     document.documentElement.style.setProperty(
       "--bodyBackgroundColor",
       " #1b1b1b"

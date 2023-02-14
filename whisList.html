@@ -19,23 +19,11 @@
       src="https://kit.fontawesome.com/53405766b0.js"
       crossorigin="anonymous"
     ></script>
-    <!--* Leafleat -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-      crossorigin=""
-    ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="./public/css/contact.css" />
-    <link rel="stylesheet" href="./public/css/contactDark.css" />
-    <script src="./public/JavaScript/contact.js" defer></script>
-    <title>Contact | EasyTech</title>
+    <link rel="stylesheet" href="./public/css/wish.css" />
+    <link rel="stylesheet" href="./public/css/wishDark.css" />
+    <script src="./public/JavaScript/wishList.js" defer></script>
+    <title>EasyTech</title>
   </head>
   <body>
     <nav>
@@ -89,60 +77,71 @@
         </form>
       </div>
     </nav>
-    <div class="navigation">
-      <a href="./index.html"><p>Home</p></a>
-      <span class="material-symbols-outlined"> chevron_right </span>
-      <a href="./contact.html"><p>Contact us</p></a>
-    </div>
-    <div id="map"></div>
-
-    <section id="ContactContainer">
-      <div class="formWrapper">
-        <div class="divHeader">
-          <h1>Leave us a Message</h1>
-        </div>
-        <form action="">
-          <div class="nameContainer">
-            <input
-              type="text"
-              name="fname"
-              id="fname"
-              placeholder="First name"
-            />
-            <input
-              type="text"
-              name="lname"
-              id="lname"
-              placeholder="last name"
-            />
-          </div>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email address"
+    <div id="wishContainer">
+      <div class="navigation">
+        <a href="./index.html"><p>Home</p></a>
+        <span class="material-symbols-outlined"> chevron_right </span>
+        <a href="./whisList.html"><p>Wishlist</p></a>
+      </div>
+      <div class="mainWrapper">
+        <h1>Wishlist</h1>
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="./public/images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
+            alt="product-wishlist"
           />
-          <textarea name="msg" id="msg" placeholder="Message"></textarea>
-          <button>Send Message</button>
-        </form>
-      </div>
-      <div class="detailsWrapper">
-        <div class="divHeader">
-          <h1>Our Store</h1>
-        </div>
-        <div class="conatiner">
-          <span>TechJoy store</span>
-          <span>Tangier el madina</span>
-          <span>90000 Morocco</span>
-          <h3>Hours of Operation</h3>
-          <span>Got Questions ? Call us 24/7!</span>
-          <span>(+212) xxx xxx xxx </span>
-          <h3>Careers</h3>
-          <p>If you're interested in employment opportunities at MyTech,</p>
-          <p>please email us.</p>
-        </div>
-      </div>
-    </section>
+          <h3 class="title__product">
+            Logitch Mouse gamming mouse 2022 7440 DPA Wireless
+          </h3>
+          <p>155.66$</p>
+          <a href="#" id="addToCart">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+          </a>
+        </article>
 
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="./public/images/testProduct/docch.jpg"
+            alt="product-wishlist"
+          />
+          <h3 class="title__product">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit
+          </h3>
+          <p>188.96$</p>
+          <a href="#" id="addToCart">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+          </a>
+        </article>
+
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="https://mytech.ma/wp-content/uploads/2021/11/vengeance-rgb-pro-16gb-2-x-8gb-ddr4-dram-3600mhz-c18-memory-kit-black-cover-1.webp"
+            alt="product-wishlist"
+          />
+          <h3 class="title__product">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit
+          </h3>
+          <p>88.96$</p>
+          <a href="#" id="addToCart">
+            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+          </a>
+        </article>
+      </div>
+    </div>
+    <div class="contactUs">
+      <h2>have any questions ?</h2>
+      <p>You can contact EasyTech stuff and ask ANYTHING you want</p>
+      <a href="./contact.html">Let Chat </a>
+    </div>
     <footer>
       <div class="wrapper">
         <img src="./public/images/Easytech.png" alt="LOGO" />

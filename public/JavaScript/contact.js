@@ -32,24 +32,76 @@ var marker = L.marker([35.7595, -5.834], { alt: "TechJoy" })
   .addTo(map) // "Kyiv" is the accessible name of this marker
   .bindPopup("Visit us at TechJoy!");
 
-// DARK MOODE
+// ------------ DARK MODE
+
 const darkMode = document.getElementById("darkMode");
-darkMode.addEventListener("click", () => {
-  document.documentElement.style.setProperty(
-    "--bodyBackgroundColor",
-    " #1b1b1b"
-  );
-  document.documentElement.style.setProperty("--textPrimeColor", " azure");
-  document.documentElement.style.setProperty(
-    "--containerBackgroundColor",
-    " #212121"
-  );
-  document.documentElement.style.setProperty(
-    "--productsBackgroundColor",
-    " #495057"
-  );
-  document.documentElement.style.setProperty(
-    "--footerBgColor",
-    " #495021212157"
-  );
+// Check if dark mode is in LocalStorage
+const darkModeOn = localStorage.getItem("DarkMode");
+///
+if (darkModeOn) {
+  darkMode.addEventListener("click", () => {
+    localStorage.removeItem("DarkMode");
+    location.reload();
+
+    document.documentElement.style.setProperty(
+      "--bodyBackgroundColor",
+      " white"
+    );
+    document.documentElement.style.setProperty("--textPrimeColor", " #555");
+    document.documentElement.style.setProperty(
+      "--containerBackgroundColor",
+      " #f5f5f5"
+    );
+    document.documentElement.style.setProperty(
+      "--productsBackgroundColor",
+      " #eaeaea"
+    );
+    document.documentElement.style.setProperty("--footerBgColor", " #f8f8f8");
+  });
+}
+if (!darkModeOn) {
+  darkMode.addEventListener("click", () => {
+    localStorage.setItem("DarkMode", true);
+    location.reload();
+
+    document.documentElement.style.setProperty(
+      "--bodyBackgroundColor",
+      " #1b1b1b"
+    );
+    document.documentElement.style.setProperty("--textPrimeColor", " azure");
+    document.documentElement.style.setProperty(
+      "--containerBackgroundColor",
+      " #212121"
+    );
+    document.documentElement.style.setProperty(
+      "--productsBackgroundColor",
+      " #495057"
+    );
+    document.documentElement.style.setProperty(
+      "--footerBgColor",
+      " #495021212157"
+    );
+  });
+}
+///
+window.addEventListener("load", () => {
+  if (darkModeOn) {
+    document.documentElement.style.setProperty(
+      "--bodyBackgroundColor",
+      " #1b1b1b"
+    );
+    document.documentElement.style.setProperty("--textPrimeColor", " azure");
+    document.documentElement.style.setProperty(
+      "--containerBackgroundColor",
+      " #212121"
+    );
+    document.documentElement.style.setProperty(
+      "--productsBackgroundColor",
+      " #495057"
+    );
+    document.documentElement.style.setProperty(
+      "--footerBgColor",
+      " #495021212157"
+    );
+  }
 });

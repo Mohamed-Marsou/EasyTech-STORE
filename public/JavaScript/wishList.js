@@ -1,29 +1,6 @@
-const buttons = document.querySelectorAll("[data-carousel-button]");
-
-buttons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    let offset = btn.dataset.carouselButton;
-    const slides = btn
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]");
-    const activeSlide = slides.querySelector("[data-active]");
-    let newIndex = [...slides.children].indexOf(activeSlide);
-    buttons.forEach((button) => {
-      button.classList.remove("active_btn");
-    });
-
-    btn.classList.add("active_btn");
-
-    if (offset == newIndex) return;
-    newIndex = offset;
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
-  });
-});
-
 // NAV BAR SEARCH
 const searchBarIcon = document.getElementById("search_icon");
-const OverlaySection = document.getElementById("Hero__carousel");
+const OverlaySection = document.getElementById("wishContainer");
 const searchBarContainer = document.querySelector(
   ".resp__serach__barContainer"
 );
@@ -41,6 +18,11 @@ OverlaySection.addEventListener("click", () => {
   }
 });
 
+// Setting up product title length
+let titles = document.querySelectorAll(".title__product");
+titles.forEach((title) => {
+  title.textContent = title.textContent.trim().slice(0, 40) + "...";
+});
 // ------------ DARK MODE
 
 const darkMode = document.getElementById("darkMode");

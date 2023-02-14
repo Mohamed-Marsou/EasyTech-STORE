@@ -193,7 +193,7 @@ nav .resp__serach__barContainer > form > button > i {
     width: 50%;
   }
   nav .header_icons #favIcon,
-nav .header_icons .fa-moon {
+  nav .header_icons .fa-moon {
     display: none;
   }
   nav .resp__serach__barContainer > form > input {
@@ -214,8 +214,8 @@ nav .header_icons .fa-moon {
     width: 60%;
   }
   nav .header_icons #favIcon,
-nav .header_icons .fa-moon,
-nav .header_icons #cushs {
+  nav .header_icons .fa-moon,
+  nav .header_icons #cushs {
     display: none;
   }
 }
@@ -261,7 +261,7 @@ nav .header_icons #cushs {
     width: 50%;
   }
   nav .header_icons #favIcon,
-nav .header_icons .fa-moon {
+  nav .header_icons .fa-moon {
     display: none;
   }
   nav .resp__serach__barContainer > form > input {
@@ -282,8 +282,8 @@ nav .header_icons .fa-moon {
     width: 60%;
   }
   nav .header_icons #favIcon,
-nav .header_icons .fa-moon,
-nav .header_icons #cushs {
+  nav .header_icons .fa-moon,
+  nav .header_icons #cushs {
     display: none;
   }
 }
@@ -347,7 +347,7 @@ nav .header_icons #cushs {
   padding: 60px;
   width: 35rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #Hero__carousel .carousel > ul > li > div {
   font-family: "Roboto", sans-serif;
@@ -407,7 +407,6 @@ nav .header_icons #cushs {
   #Hero__carousel .carousel > ul > li > img {
     padding: 0;
     width: 35vw;
-    background: #000;
   }
   #Hero__carousel .carousel > ul > li > div {
     z-index: 1;
@@ -433,7 +432,6 @@ nav .header_icons #cushs {
   #Hero__carousel .carousel > ul > li > img {
     padding: 0;
     width: 35vw;
-    background: #000;
   }
   #Hero__carousel .carousel > ul > li > div {
     z-index: 1;
@@ -528,9 +526,9 @@ nav .header_icons #cushs {
 .categories > .category > div > p {
   line-height: 40px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .categories > .category > div > p > span {
   color: rgb(255, 49, 49);
@@ -617,9 +615,9 @@ nav .header_icons #cushs {
   border-radius: 10px;
   overflow: hidden;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .store_feature .Container > .wrapper {
   width: 20%;
@@ -684,7 +682,7 @@ nav .header_icons #cushs {
   left: 50%;
   transform: translateX(-50%);
   -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
-          clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 #bestSeller .articlesWrapper {
   width: 95%;
@@ -727,7 +725,7 @@ nav .header_icons #cushs {
 #bestSeller .articlesWrapper article > a > img {
   width: 13rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-left: 1.6rem;
 }
 #bestSeller .articlesWrapper article .product__detail {
@@ -799,7 +797,12 @@ nav .header_icons #cushs {
   width: 100%;
   height: 50vh;
   background: rgb(245, 243, 239);
-  background: linear-gradient(52deg, rgb(245, 243, 239) 0%, rgba(245, 243, 239, 0.7847514006) 43%, rgb(255, 255, 255) 100%);
+  background: linear-gradient(
+    52deg,
+    rgb(245, 243, 239) 0%,
+    rgba(245, 243, 239, 0.7847514006) 43%,
+    rgb(255, 255, 255) 100%
+  );
   margin: 1rem 0rem;
   display: flex;
   align-items: center;
@@ -836,7 +839,7 @@ nav .header_icons #cushs {
   width: 10rem;
   height: 10rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .degitaProduct > .pro_dtls .divProduct > div {
   height: 100%;
@@ -934,7 +937,7 @@ nav .header_icons #cushs {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 750px) {
@@ -1019,7 +1022,7 @@ nav .header_icons #cushs {
   width: 5rem;
   height: 5rem;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #mixed__products > div > .products_cell > .products_details {
   width: 19rem;
@@ -1088,9 +1091,9 @@ nav .header_icons #cushs {
   display: flex;
   align-items: center;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .mailContiner > div i {
   color: azure;
@@ -1259,4 +1262,4 @@ footer .bank_lg > div > img {
   footer .bank_lg > div {
     display: none;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

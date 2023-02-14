@@ -1,0 +1,54 @@
+:root {
+  --bodyBackgroundColor: white;
+  --textPrimeColor: #555;
+  --containerBackgroundColor: #f5f5f5;
+  --productsBackgroundColor: #eaeaea;
+  --footerBgColor: #f8f8f8;
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+}
+nav .header_icons > a > i,
+nav .header_icons > i,
+nav .header_icons .cartAndSpending > a > span,
+#favIcon,
+nav .header_icons .cartAndSpending h6,
+nav .search_bar form > button > i {
+  color: var(--textPrimeColor);
+}
+nav .search_bar > form > input {
+  background-color: var(--bodyBackgroundColor);
+}
+#mainContainer .wrapper > div .header > h1,
+#mainContainer .wrapper > div > form > div label,
+#mainContainer .wrapper > div > form > h2,
+#mainContainer .navigation > a > p,
+#mainContainer .navigation,
+#mainContainer .wrapper > div > form > a,
+#mainContainer .wrapper > div > form > p {
+  color: var(--textPrimeColor);
+}
+
+#mainContainer .wrapper > div > form > div > input,
+#mainContainer .wrapper > div > form > div > select {
+  background-color: var(--bodyBackgroundColor);
+  color: var(--textPrimeColor);
+}
+#mainContainer .wrapper #option {
+  background-color: var(--containerBackgroundColor);
+  color: var(--textPrimeColor);
+}
+footer {
+  background-color: var(--footerBgColor);
+  color: var(--textPrimeColor);
+}
+footer > .wrapper > div > div > p {
+  color: var(--textPrimeColor);
+}
+footer > .wrapper > a {
+  color: var(--textPrimeColor);
+}
+footer .bank_lg {
+  background-color: var(--productsBackgroundColor);
+}
