@@ -14,7 +14,8 @@ nav .header_icons > i,
 nav .header_icons .cartAndSpending > a > span,
 #favIcon,
 nav .header_icons .cartAndSpending h6,
-nav .search_bar form > button > i {
+nav .search_bar form > button > i,
+nav .search_bar > form > input {
   color: var(--textPrimeColor);
 }
 nav .search_bar > form > input {

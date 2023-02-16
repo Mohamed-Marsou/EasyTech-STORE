@@ -21,18 +21,24 @@ nav .search_bar > form > input {
 nav .search_bar > form > input {
   background-color: var(--bodyBackgroundColor);
 }
-#wishContainer .mainWrapper > h1,
-#wishContainer .mainWrapper > article h3,
-#wishContainer .mainWrapper > article p,
-#wishContainer .mainWrapper > article #addToCart,
-.contactUs,
-#wishContainer .navigation,
-#wishContainer .navigation > a {
+#mainContainEr > h1,
+#mainContainEr .header > h1,
+#mainContainEr .mainWrapper > .Billing > form .userNameContainer label,
+#mainContainEr .mainWrapper > .Billing > form .userNameContainer > div > input,
+#mainContainEr .mainWrapper > .Billing > form > label,
+#mainContainEr .mainWrapper > .Billing > form > input,
+#mainContainEr .mainWrapper > .Billing > form > textarea,
+#mainContainEr .payOpts > span,
+#mainContainEr .mainWrapper > .Order .struct,
+#mainContainEr .mainWrapper > .Order .product_details,
+#mainContainEr .mainWrapper > .Order > p {
   color: var(--textPrimeColor);
 }
-#wishContainer .mainWrapper > article #addToCart,
-.contactUs {
-  background-color: var(--productsBackgroundColor);
+#mainContainEr .mainWrapper > .Order,
+#mainContainEr .mainWrapper > .Billing > form .userNameContainer > div > input,
+#mainContainEr .mainWrapper > .Billing > form > input,
+#mainContainEr .mainWrapper > .Billing > form > textarea {
+  background-color: var(--containerBackgroundColor);
 }
 footer {
   background-color: var(--footerBgColor);
