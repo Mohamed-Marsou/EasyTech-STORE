@@ -20,15 +20,15 @@
       crossorigin="anonymous"
     ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="../public/css/profile.css" />
-    <link rel="stylesheet" href="../public/css/profileDark.css" />
-    <script src="../public/JavaScript/profile.js" defer></script>
+    <link rel="stylesheet" href="./public/css/wish.css" />
+    <link rel="stylesheet" href="./public/css/wishDark.css" />
+    <script src="./public/JavaScript/wishList.js" defer></script>
     <title>EasyTech</title>
   </head>
   <body>
     <nav>
       <a href="index.html">
-        <img src="../public/images/Easytech.png" alt="LOGO" />
+        <img src="./public/images/Easytech.png" alt="LOGO" />
       </a>
       <div class="search_bar">
         <form action="">
@@ -44,6 +44,7 @@
       </div>
       <div class="header_icons">
         <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        <i class="fa-regular fa-moon" id="darkMode"></i>
         <a href="whisList.html">
           <span class="material-symbols-outlined" id="favIcon"> favorite </span>
         </a>
@@ -76,52 +77,76 @@
         </form>
       </div>
     </nav>
-    <div id="prfileContainer">
+    <div id="wishContainer">
       <div class="navigation">
         <a href="./index.html"><p>Home</p></a>
         <span class="material-symbols-outlined"> chevron_right </span>
-        <a href="./profile.html"><p>Profile</p></a>
+        <a href="./whisList.html"><p>Wishlist</p></a>
       </div>
-      <div class="cntProfile">
-        <div class="dash">
-          <div class="slot">
-            <a href="./Account.html">Account details</a>
-            <a href=""><i class="fa-solid fa-user"></i></a>
-          </div>
-          <div class="slot activeSlot">
-            <a href="Address.html">Address</a>
-            <a href=""><i class="fa-solid fa-map-location-dot"></i></a>
-          </div>
-          <div class="slot">
-            <p>Dark mode</p>
-            <div class="dark_label">
-              <div class="ball"></div>
-            </div>
-          </div>
-          <div class="slot">
-            <a href="">Log Out</a>
-            <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
-          </div>
-        </div>
-        <div class="Details">
-          <h1>Delivery Address</h1>
-          <div class="conatiner">
-            <form>
-              <label for="Address">Address *</label>
-              <input type="text" name="Address" />
-              <label for="City">City *</label>
-              <input type="text" name="City" />
-              <label for="Zip">Zip Code </label>
-              <input type="text" name="Zip" />
-              <button>SUBMIT</button>
-            </form>
-          </div>
-        </div>
+      <div class="mainWrapper">
+        <h1>Order(s) details</h1>
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="./public/images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
+            alt="product-wishlist"
+          />
+          <h3 class="title__product">
+            Logitch Mouse gamming mouse 2022 7440 DPA Wireless
+          </h3>
+          <p class="init_price">155.66$</p>
+          <input type="number" value="01" class="quantity" min="1" />
+          <p class="total">155.66$</p>
+        </article>
+
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="./public/images/testProduct/docch.jpg"
+            alt="product-wishlist"
+          />
+          <h3 class="title__product">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit
+          </h3>
+          <p class="init_price">188.96$</p>
+          <input type="number" value="01" class="quantity" min="1" />
+          <p class="total">155.66$</p>
+        </article>
+
+        <article>
+          <a href="#">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img
+            src="https://mytech.ma/wp-content/uploads/2021/11/vengeance-rgb-pro-16gb-2-x-8gb-ddr4-dram-3600mhz-c18-memory-kit-black-cover-1.webp"
+            alt="product-wishlist"
+          />
+          <h3 class="title__product">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit
+          </h3>
+          <p class="init_price">18.96$</p>
+          <input type="number" value="01" class="quantity" min="1" />
+          <p class="total">155.66$</p>
+        </article>
       </div>
+      <div class="fromContiner">
+        <form action="#" method="post">
+          <button>Validate the order</button>
+        </form>
+      </div>
+    </div>
+    <div class="contactUs">
+      <h2>have any questions ?</h2>
+      <p>You can contact EasyTech stuff and ask ANYTHING you want</p>
+      <a href="./contact.html">Let Chat </a>
     </div>
     <footer>
       <div class="wrapper">
-        <img src="../public/images/Easytech.png" alt="LOGO" />
+        <img src="./public/images/Easytech.png" alt="LOGO" />
         <div>
           <i class="fa-solid fa-headset"></i>
           <div>
@@ -162,14 +187,11 @@
           reserved 2023
         </p>
         <div>
-          <img src="../public/images/brands/mastercard-2.svg" alt="" />
-          <img src="../public/images/brands/visa.svg" alt="" />
-          <img src="../public/images/brands/paypal-3.svg" alt="" />
+          <img src="./public/images/brands/mastercard-2.svg" alt="" />
+          <img src="./public/images/brands/visa.svg" alt="" />
+          <img src="./public/images/brands/paypal-3.svg" alt="" />
         </div>
       </div>
     </footer>
-  </body>
-</html>
-
   </body>
 </html>

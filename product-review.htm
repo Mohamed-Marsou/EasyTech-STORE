@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/public/images/logo.png"
+      type="image/x-icon"
+    />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="./public/css/product-review.css" />
+    <script src="./public/JavaScript/product-review.js" defer></script>
+    <title>EasyTech</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">
+        <img src="./public/images/Easytech.png" alt="LOGO" />
+      </a>
+      <div class="search_bar">
+        <form action="">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search for a product ...."
+          />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div class="header_icons">
+        <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+        <i class="fa-regular fa-moon" id="darkMode"></i>
+        <a href="whisList.html">
+          <span class="material-symbols-outlined" id="favIcon"> favorite </span>
+        </a>
+        <a href="login.html">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <div class="cartAndSpending">
+          <a href="./Cart.html">
+            <span class="material-symbols-outlined">
+              local_mall
+              <p>0</p>
+            </span>
+          </a>
+          <a href="./Cart.html">
+            <h6 id="cushs">0000 $</h6>
+          </a>
+        </div>
+      </div>
+
+      <div class="resp__serach__barContainer">
+        <form action="#" method="post">
+          <input
+            type="search"
+            id="resp__serach__bar"
+            placeholder="Looking for something..."
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass" id="searchBar_btn"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div id="mainCintianer">
+      <div class="carouselWrapper">
+        <div class="main">
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
+            id="mainCover"
+            alt=""
+          />
+          <p id="percentage">-0%</p>
+        </div>
+        <div class="opt">
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
+            alt=""
+          />
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-2.webp"
+            alt=""
+          />
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-3.webp"
+            alt=""
+          />
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-4.webp"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="productDetailsWrapper">
+        <div class="productDetails">
+          <small>Componenets</small>
+          <h1>MSI Geforce GTX 1660 Super Gaming X 6GB GDDR6</h1>
+          <img
+            src="https://mytech.ma/wp-content/uploads/2021/11/msi-logo.png"
+            alt=""
+          />
+          <div class="prd_data">
+            <div>
+              <i class="fa-solid fa-truck-fast"></i>
+              <p>Free delivery</p>
+            </div>
+            <div>
+              <img src="./public/images/SVGs/download.svg" alt="" />
+              <span id="wrranty">1 year wrranty</span>
+            </div>
+          </div>
+        </div>
+        <div class="productDelivery">
+          <div class="price">
+            <div class="availblity">
+              <p>Availablity:</p>
+              <span>9 in stock</span>
+            </div>
+            <h2 id="finalPrice">1749.99 DH</h2>
+            <small id="orignalPrice">2650.99 DH</small>
+            <form action="" method="post">
+              <input
+                type="number"
+                id="Quantity"
+                name="Quantity"
+                value="01"
+                min="1"
+              />
+              <button>
+                <i class="fa-brands fa-opencart"></i>
+                Add to cart
+              </button>
+            </form>
+            <a href="#">
+              <i class="fa-regular fa-heart"></i>
+              Add to wishlist
+            </a>
+          </div>
+          <div class="deliveryDetls">
+            <i class="fa-solid fa-truck-fast"></i>
+            <p>
+              Receive your order <span>tomorrow</span> in Tangier. or in
+              <span>3 days</span>
+              for other regions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <div class="container">
+        <div class="header">
+          <li class="activeed"><a href="#">Description</a></li>
+          <li><a href="#">Specification</a></li>
+          <li><a href="">Reviews</a></li>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+          est ea, enim, reprehenderit deleniti fugiat quos libero delectus,
+          tenetur laudantium dignissimos nesciunt incidunt ratione possimus at
+          molestiae labore doloremque esse! Cumque minus magni, architecto iste
+          praesentium aliquid nesciunt animi aperiam nihil vitae iusto fugiat
+          sequi, neque dolor possimus molestias incidunt qui, beatae facilis!
+          Debitis aliquid, facilis praesentium voluptas non cumque alias maiores
+          repudiandae ut! Doloremque praesentium esse blanditiis laboriosam unde
+          enim accusantium autem exercitationem delectus suscipit commodi quas
+          nobis itaque neque est illo quam vel consequuntur maiores odit
+          mollitia ducimus, animi iste. Eum porro maxime iure labore dolorem sed
+          quibusdam!
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="header">
+          <li><a href="#">Description</a></li>
+          <li class="activeed"><a href="#">Specification</a></li>
+          <li><a href="">Reviews</a></li>
+        </div>
+        <div class="cellesWrapper">
+          <div class="cell">
+            <span>Product type</span>
+            <p>Storage kit</p>
+          </div>
+          <div class="cell">
+            <span>capacity</span>
+            <p>16 GB: 2 x 8 GB</p>
+          </div>
+          <div class="cell">
+            <span>Storage type</span>
+            <p>DDR4 SDRAM – DIMM 288-PIN</p>
+          </div>
+          <div class="cell">
+            <span>Extension type</span>
+            <p>Generic</p>
+          </div>
+          <div class="cell">
+            <span>Data integrity check</span>
+            <p>Non-ECC</p>
+          </div>
+          <div class="cell">
+            <span>speed</span>
+            <p>3600 MHz (PC4-28800)</p>
+          </div>
+          <div class="cell">
+            <span>Latency times</span>
+            <p>CL18 (18-22-22-42)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="header">
+          <li><a href="#">Description</a></li>
+          <li><a href="#">Specification</a></li>
+          <li class="activeed"><a href="">Reviews</a></li>
+        </div>
+        <h3>Based on 0 reviews</h3>
+        <div class="reviwContainer">
+          <div class="wrapper">
+            <p>
+              0.0
+              <span>overall</span>
+            </p>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <div class="sperator"></div>
+              <p>0</p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p>0</p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p>0</p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p>0</p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p>0</p>
+            </div>
+          </div>
+          <span
+            >Only logged in customers who have purchased this product may leave
+            a review.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <section id="mixed__products">
+      <div class="newest_products">
+        <div class="cell_header">
+          <span>Newest Products</span>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2021/11/samsung-portable-t5.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Samsung Portable T5 1TB</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/02/logitech-g733-thumb.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Logitech G733 Lightspeed</a></h1>
+            <div>
+              <span>100.05$</span>
+              <p>221$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/04/crucial-p2-1tb-thumb.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Crucial P2 SSD M.2 PCIe NVMe 1 TB </a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2021/11/sandisk1tbex.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">SANDISK Extreme Portable</a></h1>
+            <div>
+              <span>66.5$</span>
+              <p>91$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pupolar_products">
+        <div class="cell_header">
+          <span>Pupolar Products</span>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/03/steelseries-qck-heavy-large.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">SteelSeries QcK Heavy Large</a></h1>
+            <div>
+              <span>336.5$</span>
+              <p>50$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/04/steelseries-qck-prism-m-thumb.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Steelseries QCK Prism Cloth RGB</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/02/trust-gxt-922-ybar-thumb.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Trust GXT 922 Ybar 7200DPI</a></h1>
+            <div>
+              <span>16.55$</span>
+              <p>31$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/06/mx-master-3-mac-thumbnail.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Logitech MX Master 3 pour Mac</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hot_products">
+        <div class="cell_header">
+          <span>On sell Products</span>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/06/i5-11400f-thumbnail-2.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">Intel Core i5-11400F 2,6Ghz</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/04/amd-ryzen-5-5600g-thumb.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">AMD Ryzen 5 5600G 4.4 GHz</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">SMSI Geforce GTX 1660 Super</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+        <div class="products_cell">
+          <a href="#">
+            <img
+              src="https://mytech.ma/wp-content/uploads/2022/01/kingston-high-endurance-32gb-cover-1.webp"
+              alt=""
+            />
+          </a>
+          <div class="products_details">
+            <h1><a href="">MicroSD Card KINGSTON</a></h1>
+            <div>
+              <span>166.5$</span>
+              <p>321$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+        <img src="./public/images/Easytech.png" alt="LOGO" />
+        <div>
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <p>You have questions ? Call us 24/7!</p>
+            <span>(+212) XXX XXX XXX</span>
+          </div>
+        </div>
+        <h4>Contact information</h4>
+        <p>Tangeir cp90000</p>
+        <h3><a href="#">Customer service</a></h3>
+        <h3><a href="#">General</a></h3>
+        <div class="social_media_icons">
+          <i class="fa-brands fa-instagram" style="color: orange"></i>
+          <i class="fa-brands fa-linkedin" style="color: rgb(0, 140, 255)"></i>
+          <i
+            class="fa-brands fa-square-facebook"
+            style="color: rgb(40, 103, 248)"
+          ></i>
+          <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 60)"></i>
+        </div>
+      </div>
+      <div class="wrapper disp">
+        <h4>Customer service</h4>
+        <a href="/login.html">My account</a>
+        <a href="./FaQ.html">FAQS</a>
+        <a href="contact.html">Contact us </a>
+      </div>
+      <div class="wrapper disp">
+        <h4>General</h4>
+        <a href="./FaQ.html">Who are we?</a>
+        <a href="./FaQ.html">Terms of Sales</a>
+        <a href="./FaQ.html">Why EasyTech</a>
+        <a href="./FaQ.html">Warranty Conditions</a>
+      </div>
+      <div class="bank_lg">
+        <p>
+          <a href="https://github.com/Mohamed-Marsou">MTM - </a>All rights
+          reserved 2023
+        </p>
+        <div>
+          <img src="./public/images/brands/mastercard-2.svg" alt="" />
+          <img src="./public/images/brands/visa.svg" alt="" />
+          <img src="./public/images/brands/paypal-3.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

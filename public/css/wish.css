@@ -269,11 +269,9 @@ nav .resp__serach__barContainer > form > button > i {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   display: flex;
-  display: flex;
   align-items: center;
-  justify-content: center;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 10px;
 }
 #wishContainer .mainWrapper > article > a > i {
   color: #e20404;
@@ -292,12 +290,48 @@ nav .resp__serach__barContainer > form > button > i {
 }
 #wishContainer .mainWrapper > article h3 {
   text-align: center;
+  font-size: 1rem;
 }
 #wishContainer .mainWrapper > article p {
-  padding: 1rem;
+  padding: 0.2rem;
   font-family: "Comfortaa", cursive;
   font-weight: bold;
 }
+#wishContainer .mainWrapper > article > input {
+  width: 4rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 10px;
+}
+/* * form style */
+#wishContainer .fromContiner {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+}
+#wishContainer .fromContiner > form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.fromContiner button {
+  width: 10rem;
+  height: 3.5rem;
+  background-color: #f23c48;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  color: azure;
+  position: absolute;
+  right: 10%;
+  bottom: 1rem;
+  transition: 0.2s ease-in-out;
+}
+.fromContiner button:hover {
+  background-color: green;
+  font-weight: bold;
+}
+
 #wishContainer .mainWrapper > article #addToCart {
   padding: 0.8rem;
   background-color: rgba(221, 221, 221, 0.4431372549);

@@ -227,122 +227,113 @@ nav .resp__serach__barContainer > form > button > i {
     width: 20%;
   }
 }
-#prfileContainer {
+#mainContainer {
   width: 100%;
-  min-height: 87vh;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
-#prfileContainer .navigation {
+#mainContainer .navigation {
   width: 100%;
   height: 7vh;
   display: flex;
   align-items: center;
   padding: 0 5%;
-  font-family: "Roboto", sans-serif;
 }
-#prfileContainer .navigation a {
+#mainContainer .navigation a {
   color: #555;
   text-decoration: none;
   font-weight: bold;
 }
-#prfileContainer .navigation span {
+#mainContainer .navigation span {
   margin: 0 1rem;
 }
-#prfileContainer .cntProfile {
-  width: 95%;
-  min-height: 87vh;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-}
-#prfileContainer .cntProfile .dash {
-  width: 30%;
-  height: 25rem;
-}
-#prfileContainer .cntProfile .dash .slot {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  height: 3rem;
+#mainContainer .wrapper {
   width: 100%;
-  cursor: pointer;
+  min-height: 85vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+  position: relative;
+}
+#mainContainer .wrapper #option {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, 50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-style: italic;
+  color: #555;
   font-size: 0.9rem;
 }
-#prfileContainer .cntProfile .dash .slot:hover > a {
-  color: #f23c48;
+#mainContainer .wrapper > div {
+  width: 50%;
+  min-height: 100%;
 }
-#prfileContainer .cntProfile .dash .slot > a,
-#prfileContainer .cntProfile .dash .slot p {
-  color: #555;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s ease-in;
-}
-#prfileContainer .cntProfile .dash .slot i {
-  font-size: 1.2rem;
-}
-#prfileContainer .cntProfile .dash .slot .dark_label {
-  width: 3rem;
-  height: 1.5rem;
-  border: 2px solid #ddd;
-  border-radius: 40px;
+#mainContainer .wrapper > div .header {
+  width: 85%;
+  height: 3rem;
+  margin: 1rem 3rem;
+  border-bottom: 1px solid #ddd;
   display: flex;
-  align-items: center;
-  padding: 0 2px;
+  align-items: flex-end;
 }
-#prfileContainer .cntProfile .dash .slot .dark_label .ball {
-  width: 18px;
-  height: 18px;
-  background-color: #bbb;
-  border-radius: 50%;
-  transition: 0.3s ease-in-out;
+#mainContainer .wrapper > div .header > h1 {
+  border-bottom: 4px solid #f23c48;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 15px;
 }
-#prfileContainer .cntProfile .dash .slot .dark_label .activeBall {
-  transform: translateX(1.2rem);
-  background-color: #fff;
+#mainContainer .wrapper > div {
+  border-right: 1px solid #ddd;
 }
-#prfileContainer .cntProfile .dash .activeSlot > a {
-  color: #f23c48 !important;
-}
-#prfileContainer .cntProfile .Details {
-  width: 68%;
-  height: 100%;
-}
-#prfileContainer .cntProfile .Details > h1 {
-  text-align: center;
-  padding: 1rem;
-}
-#prfileContainer .cntProfile .Details .conatiner {
-  width: 100%;
-  min-height: 80vh;
-}
-#prfileContainer .cntProfile .Details .conatiner > form {
+#mainContainer .wrapper > div > form {
   width: 90%;
   min-height: 28rem;
   margin: 1rem auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  padding: 10px;
+  justify-content: space-evenly;
+  padding: 20px;
 }
-#prfileContainer .cntProfile .Details .conatiner > form label {
+#mainContainer .wrapper > div > form > h2 {
+  font-size: 1rem;
+  align-self: flex-start;
+  margin-left: 2rem;
+  line-height: 2rem;
+  color: rgb(23, 31, 78);
+}
+#mainContainer .wrapper > div > form > p {
   color: #555;
-  margin-left: 1rem;
+  padding: 20px;
+  line-height: 2rem;
+  font-size: 0.9rem;
 }
-#prfileContainer .cntProfile .Details .conatiner > form > input {
+#mainContainer .wrapper > div > form > div {
+  width: 90%;
+  min-height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+  margin-top: 2rem;
+}
+#mainContainer .wrapper > div > form > div label {
+  color: #555;
+}
+#mainContainer .wrapper > div > form > div > input {
   height: 2.5rem;
   border-radius: 20px;
   border: 1px solid #ddd;
   padding: 0 15px;
-  margin: 0.4rem 1rem 1rem 0;
-  width: 80%;
+  margin-top: 1rem;
 }
-#prfileContainer .cntProfile .Details .conatiner > form > select {
+#mainContainer .wrapper > div > form > div > select {
   width: 6rem;
   height: 2rem;
   border-radius: 50px;
@@ -350,7 +341,7 @@ nav .resp__serach__barContainer > form > button > i {
   margin: 1rem 0;
   border: 1px solid #ddd;
 }
-#prfileContainer .cntProfile .Details .conatiner > form > button {
+#mainContainer .wrapper > div > form > button {
   background-color: #f23c48;
   color: azure;
   padding: 0.9rem 2.5rem;
@@ -358,33 +349,33 @@ nav .resp__serach__barContainer > form > button > i {
   border: none;
   font-weight: bold;
   align-self: flex-start;
-  margin-top: 1rem;
+  margin-left: 1.5rem;
   cursor: pointer;
+}
+#mainContainer .wrapper > div > form > a {
+  color: #555;
+  font-style: italic;
+  align-self: flex-start;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
 }
 
 @media screen and (max-width: 768px) {
-  #prfileContainer .cntProfile {
+  #mainContainer .wrapper {
     flex-direction: column;
   }
-  #prfileContainer .cntProfile .dash {
-    width: 75%;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 2rem 0 1rem 0;
+  #mainContainer .wrapper #option {
+    display: none;
   }
-  #prfileContainer .cntProfile .dash .slot {
-    height: 4rem;
-  }
-  #prfileContainer .cntProfile .Details {
-    width: 80%;
-  }
-  #prfileContainer .cntProfile .Details .conatiner {
+  #mainContainer .wrapper > div {
     width: 100%;
-    min-height: 80vh;
+    min-height: 100%;
   }
-  #prfileContainer .cntProfile .Details .conatiner > form > input {
-    height: 2.5rem;
-    width: 100%;
+  #mainContainer .wrapper > div {
+    border-right: none;
+  }
+  #mainContainer .wrapper > div > form {
+    width: 98%;
   }
 }
 footer {
@@ -527,4 +518,4 @@ footer .bank_lg > div > img {
   footer .bank_lg > div {
     display: none;
   }
-}/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=login.css.map */

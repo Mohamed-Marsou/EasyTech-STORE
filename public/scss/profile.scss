@@ -300,10 +300,30 @@ nav {
         i {
           font-size: 1.2rem;
         }
+        .dark_label {
+          width: 3rem;
+          height: 1.5rem;
+          border: 2px solid #ddd;
+          border-radius: 40px;
+          display: flex;
+          align-items: center;
+          padding: 0 2px;
+          .ball {
+            width: 18px;
+            height: 18px;
+            background-color: #bbb;
+            border-radius: 50%;
+            transition: 0.3s ease-in-out;
+          }
+          .activeBall {
+            transform: translateX(1.2rem);
+            background-color: #fff;
+          }
+        }
       }
       .activeSlot {
         > a {
-          color: #f23c48;
+          color: #f23c48 !important;
         }
       }
     }
@@ -363,49 +383,194 @@ nav {
   }
 }
 
-.checkbox {
-  opacity: 0;
-  position: absolute;
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+@media screen and (max-width: 768px) {
+  #prfileContainer {
+    .cntProfile {
+      flex-direction: column;
+      .dash {
+        width: 75%;
+        height: fit-content;
+        margin: 2rem 0 1rem 0;
+
+        .slot {
+          height: 4rem;
+        }
+      }
+
+      .Details {
+        width: 80%;
+
+        .conatiner {
+          width: 100%;
+          min-height: 80vh;
+          > form {
+            > input {
+              height: 2.5rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.label {
-  background-color: #555;
-  border-radius: 50px;
-  cursor: pointer;
+footer {
+  width: 100%;
+  min-height: 82vh;
+  background-color: #f8f8f8;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
+  justify-content: space-evenly;
   position: relative;
-  height: 19px;
-  width: 50px;
-  transform: scale(1.5);
+  > .wrapper {
+    width: 27rem;
+    height: 25rem;
+    padding: 20px 0;
+    @include flexCenter();
+    flex-direction: column;
+    justify-content: space-evenly;
+    > h3 > a {
+      color: #555;
+      text-decoration: none;
+      display: none;
+    }
+    > a {
+      text-decoration: none;
+      color: #555;
+    }
+    > img {
+      width: 15rem;
+    }
+    > div {
+      display: flex;
+      > i {
+        font-size: 4rem;
+        color: #f23c48;
+        padding: 0 20px;
+      }
+      > div {
+        > p {
+          font-size: 0.9rem;
+          color: #555;
+          padding: 15px 0;
+        }
+      }
+    }
+    .social_media_icons {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > i {
+        font-size: 1.5rem;
+        filter: grayscale(100%);
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  .bank_lg {
+    width: 100%;
+    height: 3.3rem;
+    background-color: #d7d5d5;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: #f23c48;
+      font-weight: bold;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      > img {
+        width: 3rem;
+        margin: 0 1rem;
+      }
+    }
+  }
 }
-
-.label .ball {
-  background-color: #ddd;
-  border-radius: 50%;
-  position: absolute;
-  top: 1px;
-  left: 3px;
-  height: 17px;
-  width: 17px;
-  transform: translateX(0px);
-  transition: transform 0.2s linear;
+//================================================
+//================================================
+//================================================
+@media screen and (max-width: 990px) {
+  footer {
+    > .wrapper {
+      width: 27rem;
+      height: 25rem;
+      padding: 20px 0;
+      @include flexCenter();
+      flex-direction: column;
+      justify-content: space-evenly;
+      > img {
+        width: 10rem;
+      }
+      > div {
+        > i {
+          font-size: 3rem;
+          margin-top: 1rem;
+        }
+        > div {
+          > p {
+            font-size: 0.9rem;
+            color: #555;
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+  }
 }
-
-.checkbox:checked + .label .ball {
-  transform: translateX(26px);
-}
-
-.moonIcon {
-  color: #f1c40f;
-  font-size: 0.9rem !important;
-  margin-top: 1px;
-}
-
-.fa-sun {
-  color: #f39c12;
-  font-size: 0.9rem !important;
-  margin-top: 1px;
+//================================================
+@media screen and (max-width: 550px) {
+  footer {
+    > .wrapper {
+      width: 90%;
+      height: 25rem;
+      padding: 20px 10px;
+      > h3 > a {
+        display: block;
+        padding: 10px;
+      }
+      > img {
+        width: 15rem;
+      }
+      > div {
+        > i {
+          font-size: 4rem;
+          margin-top: 1rem;
+        }
+        > div {
+          > p {
+            font-size: 0.9rem;
+            color: #555;
+            padding: 15px 0;
+          }
+        }
+      }
+    }
+    .disp {
+      display: none;
+    }
+    .bank_lg {
+      a {
+        text-decoration: none;
+        color: #f23c48;
+        font-weight: bold;
+      }
+      > div {
+        display: none;
+      }
+    }
+  }
 }

@@ -299,7 +299,7 @@ nav .resp__serach__barContainer > form > button > i {
   -webkit-appearance: none;
   margin: 0;
 }
-#mainContainEr .mainWrapper > .Billing > form input[type=number] {
+#mainContainEr .mainWrapper > .Billing > form input[type="number"] {
   -moz-appearance: textfield;
 }
 #mainContainEr .mainWrapper > .Billing > form .userNameContainer {
@@ -371,6 +371,15 @@ nav .resp__serach__barContainer > form > button > i {
 #mainContainEr .mainWrapper > .Order > .header {
   margin: 0 1rem;
   width: 29rem;
+  position: relative;
+}
+#mainContainEr .mainWrapper > .Order > .header > a > i {
+  align-self: center;
+  padding: 1rem;
+  font-size: 1.4rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0.2rem;
 }
 #mainContainEr .mainWrapper > .Order .struct {
   width: 90%;
@@ -577,4 +586,4 @@ footer .bank_lg > div > img {
   footer .bank_lg > div {
     display: none;
   }
-}/*# sourceMappingURL=Cart.css.map */
+} /*# sourceMappingURL=Cart.css.map */

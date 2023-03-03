@@ -1,6 +1,6 @@
 // NAV BAR SEARCH
 const searchBarIcon = document.getElementById("search_icon");
-const OverlaySection = document.getElementById("wishContainer");
+const OverlaySection = document.getElementById("mainContainer");
 const searchBarContainer = document.querySelector(
   ".resp__serach__barContainer"
 );
@@ -17,23 +17,25 @@ OverlaySection.addEventListener("click", () => {
     clicked = false;
   }
 });
-
-// Setting up product title length
-let titles = document.querySelectorAll(".title__product");
-titles.forEach((title) => {
-  title.textContent = title.textContent.trim().slice(0, 20) + "...";
+// Input filter
+const min = document.getElementById("minVal");
+const max = document.getElementById("maxVal");
+const range = document.getElementById("filteRange");
+const cancelLayer = document.querySelector(".wrapper");
+range.addEventListener("mousemove", () => {
+  min.innerHTML = range.value + "$";
 });
 
-//* PRICE SYS for Order details Page
-const priceInput = document.querySelectorAll(".quantity");
-priceInput.forEach((price) => {
-  price.addEventListener("change", () => {
-    let nextSibling = price.nextElementSibling;
-    let prevSibling = price.previousElementSibling;
-    nextSibling.innerHTML =
-      (parseFloat(prevSibling.innerHTML) * parseFloat(price.value)).toFixed(2) +
-      "$";
-  });
+// Filter visibility control
+const filterBtn = document.getElementById("showFilter");
+const links_Filter = document.querySelector(".links_Filter");
+const layEr = document.querySelector(".__products");
+
+filterBtn.addEventListener("click", () => {
+  links_Filter.style = "left:0";
+});
+layEr.addEventListener("click", () => {
+  links_Filter.style = "left:-100%";
 });
 
 // ------------ DARK MODE
