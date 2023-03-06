@@ -26,60 +26,7 @@
     <title>EasyTech</title>
   </head>
   <body>
-    <nav>
-      <!-- ! Temp link ---------------------- -->
-      <!-- TODO change it back to home.html -->
-      <a href="./index.html">
-        <img src="./public/images/Easytech.png" alt="LOGO" />
-      </a>
-      <!-- ! Temp link -->
-      <div class="search_bar">
-        <form action="">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search for a product ...."
-          />
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-      </div>
-      <div class="header_icons">
-        <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
-        <i class="fa-regular fa-moon" id="darkMode"></i>
-        <a href="whisList.html">
-          <span class="material-symbols-outlined" id="favIcon"> favorite </span>
-        </a>
-        <a href="login.html">
-          <i class="fa-regular fa-user"></i>
-        </a>
-        <div class="cartAndSpending">
-          <a href="./Cart.html">
-            <span class="material-symbols-outlined">
-              local_mall
-              <p>0</p>
-            </span>
-          </a>
-          <a href="./Cart.html">
-            <h6 id="cushs">0000 $</h6>
-          </a>
-        </div>
-      </div>
-
-      <div class="resp__serach__barContainer">
-        <form action="#" method="post">
-          <input
-            type="search"
-            id="resp__serach__bar"
-            placeholder="Looking for something..."
-          />
-          <button>
-            <i class="fa-solid fa-magnifying-glass" id="searchBar_btn"></i>
-          </button>
-        </form>
-      </div>
-    </nav>
+    <%- include('./includes/nav.ejs'); -%>
 
     <div id="mainContainer">
       <div class="links_Filter">
@@ -774,54 +721,7 @@
         </div>
       </form>
     </div>
-    <footer>
-      <div class="wrapper">
-        <img src="./public/images/Easytech.png" alt="LOGO" />
-        <div>
-          <i class="fa-solid fa-headset"></i>
-          <div>
-            <p>You have questions ? Call us 24/7!</p>
-            <span>(+212) XXX XXX XXX</span>
-          </div>
-        </div>
-        <h4>Contact information</h4>
-        <p>Tangeir cp90000</p>
-        <h3><a href="#">Customer service</a></h3>
-        <h3><a href="#">General</a></h3>
-        <div class="social_media_icons">
-          <i class="fa-brands fa-instagram" style="color: orange"></i>
-          <i class="fa-brands fa-linkedin" style="color: rgb(0, 140, 255)"></i>
-          <i
-            class="fa-brands fa-square-facebook"
-            style="color: rgb(40, 103, 248)"
-          ></i>
-          <i class="fa-brands fa-whatsapp" style="color: rgb(0, 255, 60)"></i>
-        </div>
-      </div>
-      <div class="wrapper disp">
-        <h4>Customer service</h4>
-        <a href="/login.html">My account</a>
-        <a href="./FaQ.html">FAQS</a>
-        <a href="contact.html">Contact us </a>
-      </div>
-      <div class="wrapper disp">
-        <h4>General</h4>
-        <a href="./FaQ.html">Who are we?</a>
-        <a href="./FaQ.html">Terms of Sales</a>
-        <a href="./FaQ.html">Why EasyTech</a>
-        <a href="./FaQ.html">Warranty Conditions</a>
-      </div>
-      <div class="bank_lg">
-        <p>
-          <a href="https://github.com/Mohamed-Marsou">MTM - </a>All rights
-          reserved 2023
-        </p>
-        <div>
-          <img src="./public/images/brands/mastercard-2.svg" alt="" />
-          <img src="./public/images/brands/visa.svg" alt="" />
-          <img src="./public/images/brands/paypal-3.svg" alt="" />
-        </div>
-      </div>
-    </footer>
+
+    <%- include('./includes/footer.ejs'); -%>
   </body>
 </html>
