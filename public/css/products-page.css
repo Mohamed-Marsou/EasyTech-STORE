@@ -281,7 +281,10 @@ nav .resp__serach__barContainer > form > button > i {
   color: #555;
   font-size: 0.9rem;
 }
-#mainContainer .links_Filter .filter input[type="range"] {
+#mainContainer .links_Filter form {
+  width: 100%;
+}
+#mainContainer .links_Filter form .filter input[type="range"] {
   -webkit-appearance: none;
   width: 60%;
   height: 7px;
@@ -402,10 +405,9 @@ nav .resp__serach__barContainer > form > button > i {
   font-size: 1.1rem;
 }
 #mainContainer .wrapper .__products article > a > img {
-  width: 90%;
-  -o-object-fit: cover;
+  width: 60%;
   object-fit: cover;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0 2rem 2rem;
 }
 #mainContainer .wrapper .__products article .product__detail {
   width: 100%;
@@ -656,7 +658,6 @@ nav .resp__serach__barContainer > form > button > i {
 .mailContiner {
   width: 100%;
   height: 6rem;
-  margin: 2rem 0;
   background-color: #f23c48;
   display: flex;
   justify-content: space-around;

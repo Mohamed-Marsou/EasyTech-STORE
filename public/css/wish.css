@@ -301,7 +301,9 @@ nav .resp__serach__barContainer > form > button > i {
   width: 4rem;
   height: 2rem;
   padding: 0 0.5rem;
-  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid #555;
+  outline: none;
 }
 /* * form style */
 #wishContainer .fromContiner {

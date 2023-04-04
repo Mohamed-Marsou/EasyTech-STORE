@@ -251,12 +251,13 @@ nav .resp__serach__barContainer > form > button > i {
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 #mainCintianer .carouselWrapper .main > img {
+  height: 60%;
   width: 70%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #mainCintianer .carouselWrapper .main p {
   position: absolute;
@@ -280,7 +281,7 @@ nav .resp__serach__barContainer > form > button > i {
   width: 8rem;
   height: 60%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   cursor: pointer;
 }
 #mainCintianer .productDetailsWrapper {
@@ -302,7 +303,7 @@ nav .resp__serach__barContainer > form > button > i {
 #mainCintianer .productDetailsWrapper .productDetails > img {
   width: 50%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 #mainCintianer .productDetailsWrapper .productDetails .prd_data {
   width: 100%;
@@ -325,7 +326,7 @@ nav .resp__serach__barContainer > form > button > i {
   width: 1.4rem;
   height: 1.4rem;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: 1rem;
 }
 #mainCintianer .productDetailsWrapper .productDetails .prd_data p {
@@ -401,8 +402,14 @@ nav .resp__serach__barContainer > form > button > i {
   font-size: 0.9rem;
   cursor: pointer;
   transition: 0.2s ease-out;
+  margin-top: 2rem;
 }
-#mainCintianer .productDetailsWrapper .productDelivery .price form > button:hover {
+#mainCintianer
+  .productDetailsWrapper
+  .productDelivery
+  .price
+  form
+  > button:hover {
   background-color: green;
 }
 #mainCintianer .productDetailsWrapper .productDelivery .price a {
@@ -499,7 +506,7 @@ nav .resp__serach__barContainer > form > button > i {
   #mainCintianer .carouselWrapper .main > img {
     width: 90%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   #mainCintianer .carouselWrapper .opt {
     grid-area: 5/1/6/6;
@@ -589,7 +596,7 @@ nav .resp__serach__barContainer > form > button > i {
   transform: translateX(-50%);
   background-color: #f23c48;
   -webkit-clip-path: polygon(100% 0, 0 0, 50% 100%);
-          clip-path: polygon(100% 0, 0 0, 50% 100%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 .description .container > p {
   margin: 4rem;
@@ -814,8 +821,7 @@ nav .resp__serach__barContainer > form > button > i {
 #mixed__products > div > .products_cell > a > img {
   width: 5rem;
   height: 5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: contain;
 }
 #mixed__products > div > .products_cell > .products_details {
   width: 19rem;
@@ -982,4 +988,4 @@ footer .bank_lg > div > img {
   footer .bank_lg > div {
     display: none;
   }
-}/*# sourceMappingURL=product-review.css.map */
+} /*# sourceMappingURL=product-review.css.map */
