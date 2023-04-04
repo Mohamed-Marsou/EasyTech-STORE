@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/public/images/logo.png"
+      href="/images/logo.png"
       type="image/x-icon"
     />
     <!--* Google icons -->
@@ -32,10 +32,10 @@
       crossorigin=""
     ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="./public/css/Cart.css" />
-    <link rel="stylesheet" href="./public/css/CartDark.css" />
-    <script src="./public/JavaScript/Cart.js" defer></script>
-    <title>Contact | EasyTech</title>
+    <link rel="stylesheet" href="/css/Cart.css" />
+    <link rel="stylesheet" href="/css/CartDark.css" />
+    <script src="/JavaScript/Cart.js" defer></script>
+    <title> CART || EasyTech</title>
   </head>
   <body>
        <%- include('./includes/nav.ejs'); -%>
@@ -43,9 +43,9 @@
     <body>
         <section id="mainContainEr">
             <div class="navigation">
-                <a href="./index.html"><p>Home</p></a>
+                <a href="/index"><p>Home</p></a>
                 <span class="material-symbols-outlined"> chevron_right </span>
-                <a href="./Cart.html"><p>CART</p></a>
+                <a href="/Cart"><p>CART</p></a>
             </div>
             <h1>Checkout</h1>
             <div class="mainWrapper">
@@ -53,40 +53,41 @@
                   <div class="header">
                     <h1>Billing Information</h1>
                   </div>
-                  <form action="">
+                  <form action="/order_checkout" method="post">
                     <div class="userNameContainer">
                       <div>
                           <label for="userName">First name *</label>
-                          <input type="text" name="userName" id="userName">
+                          <input type="text" name="userName" id="userName" value="<%=User.user_name%>" required>
                       </div>
                       <div>
-                          <label for="LastName">Last name *</label>
+                          <label for="LastName">Last name </label>
                           <input type="text" name="LastName" id="LastName">
                       </div>
                     </div>
                     <label for="email">Email * </label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" value="<%=User.user_email%>" required >
                     <label for="text">Address * </label>
-                    <input type="text" name="Address" id="Address">
+                    <input type="text" name="Address" id="Address"  value="<%=User.address%>" required>
                     <label for="City">City * </label>
-                    <input type="text" name="City" id="City">
+                    <input type="text" name="City" id="City"  value="<%=User.city%>" required>
                     <label for="Zip">Zip Code  </label>
                     <input type="number" name="Zip" id="Zip">
                     <label for="phoneNumber">phone number * </label>
-                    <input type="number" name="phoneNumber" id="phoneNumber">
+                    <input type="number" name="phoneNumber" id="phoneNumber"  value="<%=User.Phone_number%>" required>
                     <label for="message">Order Notes  (optional)</label>
                     <textarea name="message" id="message" placeholder="Comments about your order(s)" ></textarea>
                       <div class="payOpts tremOfUse">
-                    <input type="checkbox" name="policy" id="policy" checked>
+                    <input type="checkbox" name="policy" id="policy" required>
                     <span>I have read and accept the general conditions *</span>
                   </div>
-                  <button>Order</button>
+                  <input type="hidden" name="Order" value="<%=JSON.stringify(CartProducts)%>" >
+                  <button type="submit">Order</button>
                   </form>
                 </div>
                 <div class="Order">
                   <div class="header">
                     <h1>Your order</h1>
-                  <a href="Cart_details.html">
+                  <a href="Cart_details">
                     <i class="fa-solid fa-gear"></i>
                   </a>
                   </div>
@@ -94,43 +95,17 @@
                     <p>Product(s)</p>
                     <p>Price</p>
                   </div>
+                  <%CartProducts.forEach(prod=>{%>
                   <div class="product_details">
                     <p>
-                      (x2) Logitch Mouse wireless PDA 8551
+                      (x<%=prod.Quantity%>) <%=prod.Prod_name%>
                     </p>
-                    <span>75,99$</span>
+                    <span><%=(prod.price*prod.Quantity).toFixed(2) %>$</span>
                   </div>
-     
-                  <div class="product_details">
-                    <p>
-                     Inventore assumligendi excepturi voluptas impedit!
-                    </p>
-                    <span>759,99$</span>
-                  </div>
-                  <div class="product_details">
-                    <p>
-                     i voluptas impedit!
-                    </p>
-                    <span>5,99$</span>
-                  </div>
-                  <div class="product_details">
-                    <p>
-                      eligendi excepturi voluptas impedit!
-                      eligendi excepturi voluptas impedit!
-                      eligendi excepturi voluptas impedit!
-                    </p>
-                    <span>250,99$</span>
-                  </div>
-                  <div class="product_details">
-                    <p>
-                      eligendi excepturi voluptas impedit!
-                    </p>
-                    <span>25,99$</span>
-                  </div>
-                  
+                  <%})%>
                   <div class="struct TOTAL_Amount">
                       <p>TOTAL</p>
-                      <p>9100,99$</p>
+                      <p><%=totalPrice%>$</p>
                   </div>
                   <div class="payOpts">
                     <input type="radio" name="delevery" id="delevery" checked>

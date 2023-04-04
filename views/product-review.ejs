@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/public/images/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--* Google icons -->
     <link
       rel="stylesheet"
@@ -20,8 +16,9 @@
       crossorigin="anonymous"
     ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="./public/css/product-review.css" />
-    <script src="./public/JavaScript/product-review.js" defer></script>
+    <link rel="stylesheet" href="/css/product-review.css" />
+    <script src="/JavaScript/product-review.js" defer></script>
+
     <title>EasyTech</title>
   </head>
   <body>
@@ -30,47 +27,29 @@
     <div id="mainCintianer">
       <div class="carouselWrapper">
         <div class="main">
-          <img
-            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
-            id="mainCover"
-            alt=""
-          />
+          <!-- prettier-ignore -->
+          <img id="mainCover" src="<%= Product.Prod_images[0] %>" />
           <p id="percentage">-0%</p>
         </div>
         <div class="opt">
-          <img
-            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
-            alt=""
-          />
-          <img
-            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-2.webp"
-            alt=""
-          />
-          <img
-            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-3.webp"
-            alt=""
-          />
-          <img
-            src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-galleries-4.webp"
-            alt=""
-          />
+          <% for (let i = 1; i < Product.Prod_images.length; i++) { %>
+          <!-- prettier-ignore -->
+          <img src="<%=Product.Prod_images[i]%>" /> <% } %>
         </div>
       </div>
       <div class="productDetailsWrapper">
         <div class="productDetails">
-          <small>Componenets</small>
-          <h1>MSI Geforce GTX 1660 Super Gaming X 6GB GDDR6</h1>
-          <img
-            src="https://mytech.ma/wp-content/uploads/2021/11/msi-logo.png"
-            alt=""
-          />
+          <small><%=Product.category%></small>
+          <h1><%=Product.Prod_name%></h1>
+          <!-- prettier-ignore -->
+          <img src=<%=Product.brand_img ? Product.brand_img  : "/images/Easytech.png" %> alt="product__Image" />
           <div class="prd_data">
             <div>
               <i class="fa-solid fa-truck-fast"></i>
               <p>Free delivery</p>
             </div>
             <div>
-              <img src="./public/images/SVGs/download.svg" alt="" />
+              <img src="/images/SVGs/download.svg" alt="" />
               <span id="wrranty">1 year wrranty</span>
             </div>
           </div>
@@ -79,24 +58,17 @@
           <div class="price">
             <div class="availblity">
               <p>Availablity:</p>
-              <span>9 in stock</span>
+              <span><%=Product.Quantity%> in stock</span>
             </div>
-            <h2 id="finalPrice">1749.99 DH</h2>
-            <small id="orignalPrice">2650.99 DH</small>
-            <form action="" method="post">
-              <input
-                type="number"
-                id="Quantity"
-                name="Quantity"
-                value="01"
-                min="1"
-              />
+            <h2 id="finalPrice"><%=Product.sell_price%> $</h2>
+            <small id="orignalPrice"><%=Product.price%> $</small>
+            <form action="/AddCart/ref=<%=Product._id%>" method="get">
               <button>
                 <i class="fa-brands fa-opencart"></i>
                 Add to cart
               </button>
             </form>
-            <a href="#">
+            <a href="/AddWishList/ref=<%=Product._id%>">
               <i class="fa-regular fa-heart"></i>
               Add to wishlist
             </a>
@@ -119,20 +91,7 @@
           <li><a href="#">Specification</a></li>
           <li><a href="">Reviews</a></li>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-          est ea, enim, reprehenderit deleniti fugiat quos libero delectus,
-          tenetur laudantium dignissimos nesciunt incidunt ratione possimus at
-          molestiae labore doloremque esse! Cumque minus magni, architecto iste
-          praesentium aliquid nesciunt animi aperiam nihil vitae iusto fugiat
-          sequi, neque dolor possimus molestias incidunt qui, beatae facilis!
-          Debitis aliquid, facilis praesentium voluptas non cumque alias maiores
-          repudiandae ut! Doloremque praesentium esse blanditiis laboriosam unde
-          enim accusantium autem exercitationem delectus suscipit commodi quas
-          nobis itaque neque est illo quam vel consequuntur maiores odit
-          mollitia ducimus, animi iste. Eum porro maxime iure labore dolorem sed
-          quibusdam!
-        </p>
+        <p><%=Product.description%></p>
       </div>
 
       <div class="container">
@@ -142,34 +101,14 @@
           <li><a href="">Reviews</a></li>
         </div>
         <div class="cellesWrapper">
+          <% for (let i = 0; i < Product.details[0].length; i++) { %> <% const
+          innerObj = Product.details[0][i]; %> <% for (const [key, value] of
+          Object.entries(innerObj)) { %>
           <div class="cell">
-            <span>Product type</span>
-            <p>Storage kit</p>
+            <span><%=key%></span>
+            <p><%=value%></p>
           </div>
-          <div class="cell">
-            <span>capacity</span>
-            <p>16 GB: 2 x 8 GB</p>
-          </div>
-          <div class="cell">
-            <span>Storage type</span>
-            <p>DDR4 SDRAM – DIMM 288-PIN</p>
-          </div>
-          <div class="cell">
-            <span>Extension type</span>
-            <p>Generic</p>
-          </div>
-          <div class="cell">
-            <span>Data integrity check</span>
-            <p>Non-ECC</p>
-          </div>
-          <div class="cell">
-            <span>speed</span>
-            <p>3600 MHz (PC4-28800)</p>
-          </div>
-          <div class="cell">
-            <span>Latency times</span>
-            <p>CL18 (18-22-22-42)</p>
-          </div>
+          <% } %> <% } %>
         </div>
       </div>
 
@@ -179,11 +118,11 @@
           <li><a href="#">Specification</a></li>
           <li class="activeed"><a href="">Reviews</a></li>
         </div>
-        <h3>Based on 0 reviews</h3>
+        <h3>Based on <%=OverAllRating%> reviews</h3>
         <div class="reviwContainer">
           <div class="wrapper">
             <p>
-              0.0
+              <%=OverAllRating/5%>
               <span>overall</span>
             </p>
             <div class="reviewCell">
@@ -193,7 +132,7 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <div class="sperator"></div>
-              <p>0</p>
+              <p><%=Product.rating[0]%></p>
             </div>
             <div class="reviewCell">
               <i class="fa-solid fa-star"></i>
@@ -202,7 +141,7 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-regular fa-star"></i>
               <div class="sperator"></div>
-              <p>0</p>
+              <p><%=Product.rating[1]%></p>
             </div>
             <div class="reviewCell">
               <i class="fa-solid fa-star"></i>
@@ -211,7 +150,7 @@
               <i class="fa-regular fa-star"></i>
               <i class="fa-regular fa-star"></i>
               <div class="sperator"></div>
-              <p>0</p>
+              <p><%=Product.rating[2]%></p>
             </div>
             <div class="reviewCell">
               <i class="fa-solid fa-star"></i>
@@ -220,7 +159,7 @@
               <i class="fa-regular fa-star"></i>
               <i class="fa-regular fa-star"></i>
               <div class="sperator"></div>
-              <p>0</p>
+              <p><%=Product.rating[3]%></p>
             </div>
             <div class="reviewCell">
               <i class="fa-solid fa-star"></i>
@@ -229,7 +168,7 @@
               <i class="fa-regular fa-star"></i>
               <i class="fa-regular fa-star"></i>
               <div class="sperator"></div>
-              <p>0</p>
+              <p><%=Product.rating[4]%></p>
             </div>
           </div>
           <span
@@ -245,201 +184,77 @@
         <div class="cell_header">
           <span>Newest Products</span>
         </div>
+        <%latestItems.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/samsung-portable-t5.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">Samsung Portable T5 1TB</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>166.5$</span>
-              <p>321$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/02/logitech-g733-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Logitech G733 Lightspeed</a></h1>
-            <div>
-              <span>100.05$</span>
-              <p>221$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/crucial-p2-1tb-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Crucial P2 SSD M.2 PCIe NVMe 1 TB </a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/sandisk1tbex.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">SANDISK Extreme Portable</a></h1>
-            <div>
-              <span>66.5$</span>
-              <p>91$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
 
       <div class="pupolar_products">
         <div class="cell_header">
           <span>Pupolar Products</span>
         </div>
+        <%chpsProducts.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2022/03/steelseries-qck-heavy-large.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">SteelSeries QcK Heavy Large</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>336.5$</span>
-              <p>50$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/steelseries-qck-prism-m-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Steelseries QCK Prism Cloth RGB</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/02/trust-gxt-922-ybar-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Trust GXT 922 Ybar 7200DPI</a></h1>
-            <div>
-              <span>16.55$</span>
-              <p>31$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/mx-master-3-mac-thumbnail.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Logitech MX Master 3 pour Mac</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
 
       <div class="hot_products">
         <div class="cell_header">
           <span>On sell Products</span>
         </div>
+        <%OnsellProds.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/i5-11400f-thumbnail-2.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">Intel Core i5-11400F 2,6Ghz</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>166.5$</span>
-              <p>321$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/amd-ryzen-5-5600g-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">AMD Ryzen 5 5600G 4.4 GHz</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">SMSI Geforce GTX 1660 Super</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/01/kingston-high-endurance-32gb-cover-1.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">MicroSD Card KINGSTON</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
     </section>
-
     <%- include('./includes/footer.ejs'); -%>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <nav>
-  <a href="./index.ejs">
-    <img src="./images/Easytech.png" alt="LOGO" />
+  <a href="/">
+    <img src="/images/Easytech.png" alt="LOGO" />
   </a>
   <div class="search_bar">
     <form action="">
@@ -16,22 +16,28 @@
   </div>
   <div class="header_icons">
     <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
-    <i class="fa-regular fa-moon" id="darkMode"></i>
-    <a href="whisList.ejs">
+    <a href="/wishList">
       <span class="material-symbols-outlined" id="favIcon"> favorite </span>
     </a>
-    <a href="login.ejs">
+    <% if(IsAuth){%>
+    <a href="/profile">
       <i class="fa-regular fa-user"></i>
     </a>
+    <%}else{%>
+    <a href="/login">
+      <i class="fa-regular fa-user"></i>
+    </a>
+    <%}%>
+
     <div class="cartAndSpending">
-      <a href="./Cart.ejs">
+      <a href="/Cart">
         <span class="material-symbols-outlined">
           local_mall
-          <p>0</p>
+          <p><%=CartCount%></p>
         </span>
       </a>
-      <a href="./Cart.ejs">
-        <h6 id="cushs">0000 $</h6>
+      <a href="/Cart">
+        <h6 id="cushs"><%=totalCush%> $</h6>
       </a>
     </div>
   </div>

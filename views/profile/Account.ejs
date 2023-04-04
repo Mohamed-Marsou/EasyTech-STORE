@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/public/images/logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
     <!--* Google icons -->
     <link
       rel="stylesheet"
@@ -20,29 +16,31 @@
       crossorigin="anonymous"
     ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="../public/css/profile.css" />
-    <link rel="stylesheet" href="../public/css/profileDark.css" />
-    <script src="../public/JavaScript/profile.js" defer></script>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link rel="stylesheet" href="../css/profileDark.css" />
+    <script src="../JavaScript/profile.js" defer></script>
     <title>EasyTech</title>
   </head>
   <body>
-       <%- include('./includes/nav.ejs'); -%>
+    <%- include('../includes/nav.ejs'); -%>
 
     <div id="prfileContainer">
       <div class="navigation">
-        <a href="./index.html"><p>Home</p></a>
+        <a href="index"><p>Home</p></a>
         <span class="material-symbols-outlined"> chevron_right </span>
-        <a href="./profile.html"><p>Profile</p></a>
+        <a href="profile"><p>Profile</p></a>
       </div>
       <div class="cntProfile">
         <div class="dash">
           <div class="slot activeSlot">
-            <a href="./Account.html">Account details</a>
-            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="profile">Account details</a>
+            <a href="profile"><i class="fa-solid fa-user"></i></a>
           </div>
           <div class="slot">
-            <a href="Address.html">Address</a>
-            <a href=""><i class="fa-solid fa-map-location-dot"></i></a>
+            <a href="profile/address">Address</a>
+            <a href="profile/address"
+              ><i class="fa-solid fa-map-location-dot"></i
+            ></a>
           </div>
 
           <div class="slot">
@@ -52,39 +50,37 @@
             </div>
           </div>
           <div class="slot">
-            <a href="">Log Out</a>
-            <a href=""><i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/LogOut">Log Out</a>
+            <a href="/LogOut"><i class="fa-solid fa-right-from-bracket"></i></a>
           </div>
         </div>
         <div class="Details">
           <h1>Account details</h1>
           <div class="conatiner">
-            <form>
+            <form action="userUpdate" method="post">
               <label for="fname">Full name *</label>
-              <input type="text" name="fname" />
+              <!-- prettier-ignore -->
+              <input type="text" name="fname" value=<%=user.user_name%> required
+              />
               <label for="emailAddress">E-mail *</label>
-              <input type="email" name="emailAddress" />
-              <label for="password">password </label>
-              <input type="password" name="password" />
-              <label for="Cpassword">Change your password </label>
-              <input type="password" name="Cpassword" />
-              <label for="Confpassword">Confirm password </label>
-              <input type="password" name="Confpassword" />
+              <!-- prettier-ignore -->
+              <input type="email" name="emailAddress" value=<%=user.user_email%>
+              required/>
+              <label for="phoneNumber">Phone number </label>
+              <!-- prettier-ignore -->
+              <input type="number" name="phoneNumber" value= <%= user ? user.Phone_number : '' %> min="10" />
               <label for="gender">Gender </label>
-              <select name="gender" id="gender">
+              <!-- prettier-ignore -->
+              <select name="gender" id="gender" value=<%=user.gender%>>
                 <option>MALE</option>
                 <option>FEMALE</option>
               </select>
-              <button>SUBMIT</button>
+              <button>UPDATE</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <%- include('./includes/footer.ejs'); -%>
-
-  </body>
-</html>
-
+    <%- include('../includes/footer.ejs'); -%>
   </body>
 </html>

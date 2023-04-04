@@ -16,9 +16,9 @@
       crossorigin="anonymous"
     ></script>
     <!--* CSS -->
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/indexDark.css" />
-    <script src="./JavaScript/index.js" defer></script>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/indexDark.css" />
+    <script src="/JavaScript/index.js" defer></script>
     <title>EasyTech</title>
   </head>
   <body>
@@ -42,7 +42,7 @@
               >
               <a href="#"> ADD TO CART</a>
             </div>
-            <img src="./images/testProduct/docch.jpg" alt="" />
+            <img src="/images/testProduct/docch.jpg" alt="" />
           </li>
           <li class="slide sl2">
             <div class="slide_details">
@@ -68,7 +68,7 @@
               <a href="#"> ADD TO CART</a>
             </div>
             <img
-              src="./images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
+              src="/images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
               alt=""
             />
           </li>
@@ -78,37 +78,37 @@
 
     <div class="categories">
       <div class="category">
-        <img src="./images/Apple_desktop.jpg" alt="" />
+        <img src="/images/Apple_desktop.jpg" alt="" />
         <div class="category__link">
           <p><span>TOP GEAR</span> WORKSTATION FORM 1299$</p>
-          <a href="products-page.html">
+          <a href="/EasyTech/desktop">
             CHECK OUT
             <i class="fa-solid fa-caret-right"></i>
           </a>
         </div>
       </div>
       <div class="category">
-        <img src="./images/LAPTOPS.jpg" alt="" />
+        <img src="/images/LAPTOPS.jpg" alt="" />
         <div class="category__link">
           <p>YOUR <span>DREAMS GAMING</span> PC IS HERE ONLY FORM 799$</p>
-          <a href="#">
+          <a href="/EasyTech/laptops">
             CHECK OUT
             <i class="fa-solid fa-caret-right"></i>
           </a>
         </div>
       </div>
       <div class="category">
-        <img src="./images/71aB8k8YYHL.jpg" alt="" />
+        <img src="/images/71aB8k8YYHL.jpg" alt="" />
         <div class="category__link">
           <p>LOOKING FOR THE BEST, <span>LOOK NO MORE</span></p>
-          <a href="#">
+          <a href="/EasyTech/components">
             CHECK OUT
             <i class="fa-solid fa-caret-right"></i>
           </a>
         </div>
       </div>
       <div class="category respoCate">
-        <img src="./images/images.jfif" alt="" />
+        <img src="/images/images.jfif" alt="" />
         <div class="category__link">
           <p>WINDOWS 10 PRO, <span>LESS THEN 10$</span></p>
           <a href="#">
@@ -164,277 +164,43 @@
         <h1>Best seller</h1>
       </div>
       <div class="articlesWrapper">
+        <%highSellProducts.forEach(prod=>{%>
         <article>
-          <a class="products_title" href="product-review.htm">
-            <p>VENGEANCE RGB PRO SL 32GB</p>
+          <!-- prettier-ignore -->
+          <a class="products_title" href=ProdId=<%=prod._id%>>
+            <p><%=prod.Prod_name%></p>
           </a>
-          <a href="product-review.htm">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/vengeance-rgb-pro-16gb-2-x-8gb-ddr4-dram-3600mhz-c18-memory-kit-black-cover-1.webp"
-              alt="product"
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="product" />
           </a>
           <div class="product__detail">
             <span
-              >152.99 $
-              <p>199.99 $</p></span
+              ><%=prod.sell_price%> $
+              <p><%=prod.price%> $</p></span
             >
             <h6 class="inStock">in stock</h6>
             <div class="add_cart">
-              <a href="">
+              <a href="/AddCart/ref=<%=prod._id%>">
                 <i class="fa-sharp fa-solid fa-cart-plus"></i>
               </a>
             </div>
             <div class="prod__act">
-              <a href="#">
+              <a href="/AddWishList/ref=<%=prod._id%>">
                 <i class="fa-regular fa-heart"></i>
                 <p>Add to wishlist</p>
               </a>
-              <a href="#">
+              <a href="ProdId=<%=prod._id%>">
                 <i class="fa-regular fa-eye"></i>
                 <p>Checkout</p>
               </a>
             </div>
           </div>
         </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>Samsung 980 Pro NVMe 1TB</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/10/samsung-980-pro-1tb-heatsink-thumbnail.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >112.99 $
-              <p>209.99 $</p></span
-            >
-            <h6 class="outStock">out stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>AMD Ryzen 5 3600 3,6 GHz</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2021/12/ryzen-3600-cover.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >252.99 $
-              <p>499.99 $</p></span
-            >
-            <h6 class="inStock">in stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>SANDISK Ultra, Micro-SDHC memory card, 32 GB</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/sandisk-ultra-32gb.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >19.99 $
-              <p>29.99 $</p></span
-            >
-            <h6 class="inStock">in stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>Samsung Portable T5 1TB</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/samsung-portable-t5.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >152.99 $
-              <p>199.99 $</p></span
-            >
-            <h6 class="inStock">in stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>Samsung Portable SSD T7 Shield 1TB</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/10/samsung-ssd-t7-shield-1tb-thumb.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >52.99 $
-              <p>99.99 $</p></span
-            >
-            <h6 class="inStock">in stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>Logitech G513 Carbon GX Blue Clicky (AZERTY)</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/01/Logitech-g513-carbon-cover-1.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >152.99 $
-              <p>199.99 $</p></span
-            >
-            <h6 class="inStock">in stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <a class="products_title" href="#">
-            <p>70mai Dash Cam 1S and 70mai Hardware Kit</p>
-          </a>
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/70mai-1s.webp"
-              alt="product"
-            />
-          </a>
-          <div class="product__detail">
-            <span
-              >152.99 $
-              <p>199.99 $</p></span
-            >
-            <h6 class="outStock">out stock</h6>
-            <div class="add_cart">
-              <a href="#">
-                <i class="fa-sharp fa-solid fa-cart-plus"></i>
-              </a>
-            </div>
-            <div class="prod__act">
-              <a href="#">
-                <i class="fa-regular fa-heart"></i>
-                <p>Add to wishlist</p>
-              </a>
-              <a href="#">
-                <i class="fa-regular fa-eye"></i>
-                <p>Checkout</p>
-              </a>
-            </div>
-          </div>
-        </article>
+        <%})%>
       </div>
     </section>
 
@@ -511,198 +277,75 @@
         <div class="cell_header">
           <span>Newest Products</span>
         </div>
+        <%latestItems.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/samsung-portable-t5.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">Samsung Portable T5 1TB</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>166.5$</span>
-              <p>321$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/02/logitech-g733-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Logitech G733 Lightspeed</a></h1>
-            <div>
-              <span>100.05$</span>
-              <p>221$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/crucial-p2-1tb-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Crucial P2 SSD M.2 PCIe NVMe 1 TB </a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2021/11/sandisk1tbex.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">SANDISK Extreme Portable</a></h1>
-            <div>
-              <span>66.5$</span>
-              <p>91$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
 
       <div class="pupolar_products">
         <div class="cell_header">
           <span>Pupolar Products</span>
         </div>
+        <%chpsProducts.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2022/03/steelseries-qck-heavy-large.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">SteelSeries QcK Heavy Large</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>336.5$</span>
-              <p>50$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/steelseries-qck-prism-m-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Steelseries QCK Prism Cloth RGB</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/02/trust-gxt-922-ybar-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Trust GXT 922 Ybar 7200DPI</a></h1>
-            <div>
-              <span>16.55$</span>
-              <p>31$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/mx-master-3-mac-thumbnail.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">Logitech MX Master 3 pour Mac</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
 
       <div class="hot_products">
         <div class="cell_header">
           <span>On sell Products</span>
         </div>
+        <%OnsellProds.forEach(prod=>{%>
         <div class="products_cell">
-          <a href="#">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
             <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/i5-11400f-thumbnail-2.webp"
-              alt=""
-            />
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
           </a>
           <div class="products_details">
-            <h1><a href="">Intel Core i5-11400F 2,6Ghz</a></h1>
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
             <div>
-              <span>166.5$</span>
-              <p>321$</p>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
             </div>
           </div>
         </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/04/amd-ryzen-5-5600g-thumb.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">AMD Ryzen 5 5600G 4.4 GHz</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/06/msi-1660-super-x-thumbnail.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">SMSI Geforce GTX 1660 Super</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
-        <div class="products_cell">
-          <a href="#">
-            <img
-              src="https://mytech.ma/wp-content/uploads/2022/01/kingston-high-endurance-32gb-cover-1.webp"
-              alt=""
-            />
-          </a>
-          <div class="products_details">
-            <h1><a href="">MicroSD Card KINGSTON</a></h1>
-            <div>
-              <span>166.5$</span>
-              <p>321$</p>
-            </div>
-          </div>
-        </div>
+        <%})%>
       </div>
     </section>
 
@@ -711,10 +354,14 @@
         <i class="fa-regular fa-paper-plane"></i>
         <p>Sign up and never miss our spacial offers</p>
       </div>
-      <form action="#" method="post">
+      <form action="Sub-email" method="post">
         <div class="container">
-          <input type="email" placeholder="Enter your email address" />
-          <button>SEND</button>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+          />
+          <button type="submit">SEND</button>
         </div>
       </form>
     </div>
