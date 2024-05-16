@@ -29,7 +29,8 @@ Contributions are welcome! If you find any bugs or have suggestions for new feat
 License:
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-gallery :
+##gallery :
+
 ![screencapture-file-C-Users-m-marsou-Desktop-EasyTech-STORE-products-page-html-2024-05-16-16_41_19](https://github.com/Mohamed-Marsou/EasyTech-STORE/assets/108639018/cdaf3243-045b-4721-bacc-e65e26f24f28)
 ![screencapture-file-C-Users-m-marsou-Desktop-EasyTech-STORE-product-review-htm-2024-05-16-16_41_34](https://github.com/Mohamed-Marsou/EasyTech-STORE/assets/108639018/d2ec1bdd-9405-4d61-943a-87c021fb9423)
 ![screencapture-file-C-Users-m-marsou-Desktop-EasyTech-STORE-index-html-2024-05-16-16_41_02](https://github.com/Mohamed-Marsou/EasyTech-STORE/assets/108639018/aa4d86fa-a7b5-429b-a614-1d9853ff1bc6)
