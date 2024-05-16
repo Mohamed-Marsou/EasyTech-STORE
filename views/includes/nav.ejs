@@ -1,0 +1,57 @@
+<nav>
+  <a href="/">
+    <img src="/images/Easytech.png" alt="LOGO" />
+  </a>
+  <div class="search_bar">
+    <form action="">
+      <input
+        type="text"
+        name="search"
+        placeholder="Search for a product ...."
+      />
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+  <div class="header_icons">
+    <i class="fa-solid fa-magnifying-glass" id="search_icon"></i>
+    <a href="/wishList">
+      <span class="material-symbols-outlined" id="favIcon"> favorite </span>
+    </a>
+    <% if(IsAuth){%>
+    <a href="/profile">
+      <i class="fa-regular fa-user"></i>
+    </a>
+    <%}else{%>
+    <a href="/login">
+      <i class="fa-regular fa-user"></i>
+    </a>
+    <%}%>
+
+    <div class="cartAndSpending">
+      <a href="/Cart">
+        <span class="material-symbols-outlined">
+          local_mall
+          <p><%=CartCount%></p>
+        </span>
+      </a>
+      <a href="/Cart">
+        <h6 id="cushs"><%=totalCush%> $</h6>
+      </a>
+    </div>
+  </div>
+
+  <div class="resp__serach__barContainer">
+    <form action="#" method="post">
+      <input
+        type="search"
+        id="resp__serach__bar"
+        placeholder="Looking for something..."
+      />
+      <button>
+        <i class="fa-solid fa-magnifying-glass" id="searchBar_btn"></i>
+      </button>
+    </form>
+  </div>
+</nav>

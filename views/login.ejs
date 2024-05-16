@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/LoginDark.css" />
+    <script src="./JavaScript/login.js" defer></script>
+    <title>EasyTech</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs'); -%>
+    <section id="mainContainer">
+      <div class="navigation">
+        <a href="./index.html"><p>Home</p></a>
+        <span class="material-symbols-outlined"> chevron_right </span>
+        <a href="./login.html"><p>LOGIN</p></a>
+      </div>
+      <div class="wrapper">
+        <span id="option">OR</span>
+        <div id="LoginContainer">
+          <div class="header">
+            <h1>Login</h1>
+          </div>
+          <form action="/login" method="post">
+            <h2>Happy to see you again! Sign into your account.</h2>
+            <!-- Showing  Err msgs -->
+            <% if(EmailErr) { %>
+            <h2 style="color: red"><%= EmailErr %></h2>
+            <%}%> <% if(PassErr) { %>
+            <h2 style="color: red"><%= PassErr %></h2>
+            <%}%>
+
+            <div>
+              <label for="email">Enter your Email address *</label>
+              <input
+                type="email"
+                name="Login_email"
+                placeholder="Email Address"
+              />
+            </div>
+            <div>
+              <label for="email">Password *</label>
+              <input type="password" name="Login_pass" placeholder="Password" />
+            </div>
+            <button>LOGIN</button>
+            <a href="#"> Forgot your password ? </a>
+          </form>
+        </div>
+
+        <div id="SignUpContainer">
+          <div class="header">
+            <h1>Sign up</h1>
+          </div>
+
+          <form action="/createUser" method="post">
+            <h2>
+              Create a new account today to enjoy the benefits of a personalized
+              shopping experience.
+            </h2>
+
+            <!-- Showing Email is taken Err msg -->
+            <% if(EmailTaken) { %>
+            <h2 style="color: red"><%= EmailTaken %></h2>
+            <%}%>
+
+            <div>
+              <label for="fullName">Full name *</label>
+              <input type="text" name="name" placeholder="Enter your name" />
+            </div>
+            <div>
+              <label for="email">Enter your Email address *</label>
+              <input type="email" name="email" placeholder="Email Address" />
+            </div>
+            <div>
+              <label for="password">Password *</label>
+              <input type="password" name="pass" placeholder="Password" />
+            </div>
+            <div>
+              <label for="Gender">Gender *</label>
+              <select name="gender" id="gender">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <p>
+              Your personal data will be used to support your experience
+              throughout this website, to manage access to your account, and for
+              other purposes described in our politique de confidentialité.
+            </p>
+            <button type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./includes/footer.ejs'); -%>
+  </body>
+</html>

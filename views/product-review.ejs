@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="/css/product-review.css" />
+    <script src="/JavaScript/product-review.js" defer></script>
+
+    <title>EasyTech</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs'); -%>
+
+    <div id="mainCintianer">
+      <div class="carouselWrapper">
+        <div class="main">
+          <!-- prettier-ignore -->
+          <img id="mainCover" src="<%= Product.Prod_images[0] %>" />
+          <p id="percentage">-0%</p>
+        </div>
+        <div class="opt">
+          <% for (let i = 1; i < Product.Prod_images.length; i++) { %>
+          <!-- prettier-ignore -->
+          <img src="<%=Product.Prod_images[i]%>" /> <% } %>
+        </div>
+      </div>
+      <div class="productDetailsWrapper">
+        <div class="productDetails">
+          <small><%=Product.category%></small>
+          <h1><%=Product.Prod_name%></h1>
+          <!-- prettier-ignore -->
+          <img src=<%=Product.brand_img ? Product.brand_img  : "/images/Easytech.png" %> alt="product__Image" />
+          <div class="prd_data">
+            <div>
+              <i class="fa-solid fa-truck-fast"></i>
+              <p>Free delivery</p>
+            </div>
+            <div>
+              <img src="/images/SVGs/download.svg" alt="" />
+              <span id="wrranty">1 year wrranty</span>
+            </div>
+          </div>
+        </div>
+        <div class="productDelivery">
+          <div class="price">
+            <div class="availblity">
+              <p>Availablity:</p>
+              <span><%=Product.Quantity%> in stock</span>
+            </div>
+            <h2 id="finalPrice"><%=Product.sell_price%> $</h2>
+            <small id="orignalPrice"><%=Product.price%> $</small>
+            <form action="/AddCart/ref=<%=Product._id%>" method="get">
+              <button>
+                <i class="fa-brands fa-opencart"></i>
+                Add to cart
+              </button>
+            </form>
+            <a href="/AddWishList/ref=<%=Product._id%>">
+              <i class="fa-regular fa-heart"></i>
+              Add to wishlist
+            </a>
+          </div>
+          <div class="deliveryDetls">
+            <i class="fa-solid fa-truck-fast"></i>
+            <p>
+              Receive your order <span>tomorrow</span> in Tangier. or in
+              <span>3 days</span>
+              for other regions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <div class="container">
+        <div class="header">
+          <li class="activeed"><a href="#">Description</a></li>
+          <li><a href="#">Specification</a></li>
+          <li><a href="">Reviews</a></li>
+        </div>
+        <p><%=Product.description%></p>
+      </div>
+
+      <div class="container">
+        <div class="header">
+          <li><a href="#">Description</a></li>
+          <li class="activeed"><a href="#">Specification</a></li>
+          <li><a href="">Reviews</a></li>
+        </div>
+        <div class="cellesWrapper">
+          <% for (let i = 0; i < Product.details[0].length; i++) { %> <% const
+          innerObj = Product.details[0][i]; %> <% for (const [key, value] of
+          Object.entries(innerObj)) { %>
+          <div class="cell">
+            <span><%=key%></span>
+            <p><%=value%></p>
+          </div>
+          <% } %> <% } %>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="header">
+          <li><a href="#">Description</a></li>
+          <li><a href="#">Specification</a></li>
+          <li class="activeed"><a href="">Reviews</a></li>
+        </div>
+        <h3>Based on <%=OverAllRating%> reviews</h3>
+        <div class="reviwContainer">
+          <div class="wrapper">
+            <p>
+              <%=OverAllRating/5%>
+              <span>overall</span>
+            </p>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <div class="sperator"></div>
+              <p><%=Product.rating[0]%></p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p><%=Product.rating[1]%></p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p><%=Product.rating[2]%></p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p><%=Product.rating[3]%></p>
+            </div>
+            <div class="reviewCell">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <div class="sperator"></div>
+              <p><%=Product.rating[4]%></p>
+            </div>
+          </div>
+          <span
+            >Only logged in customers who have purchased this product may leave
+            a review.</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <section id="mixed__products">
+      <div class="newest_products">
+        <div class="cell_header">
+          <span>Newest Products</span>
+        </div>
+        <%latestItems.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+
+      <div class="pupolar_products">
+        <div class="cell_header">
+          <span>Pupolar Products</span>
+        </div>
+        <%chpsProducts.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+
+      <div class="hot_products">
+        <div class="cell_header">
+          <span>On sell Products</span>
+        </div>
+        <%OnsellProds.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </section>
+    <%- include('./includes/footer.ejs'); -%>
+  </body>
+</html>

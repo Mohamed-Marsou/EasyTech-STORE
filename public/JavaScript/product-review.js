@@ -31,13 +31,13 @@ otherSlide.forEach((pic) => {
 const displayPercentage = document.getElementById("percentage");
 const finalPrice = document.getElementById("finalPrice");
 const orignalPrice = document.getElementById("orignalPrice");
+
 let finalPriceNum = Number(
   finalPrice.innerHTML.substring(0, finalPrice.innerHTML.indexOf(" "))
 );
 let orignalPriceNum = Number(
   orignalPrice.innerHTML.substring(0, orignalPrice.innerHTML.indexOf(" "))
 );
-
 let culcPercentage =
   ((finalPriceNum - orignalPriceNum) /
     ((finalPriceNum + orignalPriceNum) / 2)) *

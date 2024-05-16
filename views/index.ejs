@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/indexDark.css" />
+    <script src="/JavaScript/index.js" defer></script>
+    <title>EasyTech</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs'); -%>
+
+    <section id="Hero__carousel">
+      <div class="carousel" data-carousel>
+        <div class="carousel__btns">
+          <button class="active_btn" data-carousel-button="0"></button>
+          <button data-carousel-button="1"></button>
+          <button data-carousel-button="2"></button>
+        </div>
+
+        <ul data-slides>
+          <li class="slide sl1" data-active>
+            <div class="slide_details">
+              <h4>WHAT YOU WAITING</h4>
+              <span
+                >GET IT NOW AND SAVE 33% ON
+                <p>AMAZON ECHO DOT</p></span
+              >
+              <a href="#"> ADD TO CART</a>
+            </div>
+            <img src="/images/testProduct/docch.jpg" alt="" />
+          </li>
+          <li class="slide sl2">
+            <div class="slide_details">
+              <h4>IT ALL HERE</h4>
+              <span
+                >SAVE UP TO 15% ON
+                <p>AZUS GTX 1650</p></span
+              >
+              <a href="#"> ADD TO CART</a>
+            </div>
+            <img
+              src="https://www.asus.com/media/global/products/yahhkprrr6owbb3g/P_setting_xxx_0_90_end_692.png"
+              alt=""
+            />
+          </li>
+          <li class="slide sl3">
+            <div class="slide_details">
+              <h4>GET WHAT YOU LOVE</h4>
+              <span
+                >GET THE BEST DEAL ON
+                <p>LOGITICH MOUSE</p></span
+              >
+              <a href="#"> ADD TO CART</a>
+            </div>
+            <img
+              src="/images/testProduct/Logitech_G305_Lightspeed_wireless_gaming_mouse_deal_amazon_9.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="categories">
+      <div class="category">
+        <img src="/images/Apple_desktop.jpg" alt="" />
+        <div class="category__link">
+          <p><span>TOP GEAR</span> WORKSTATION FORM 1299$</p>
+          <a href="/EasyTech/desktop">
+            CHECK OUT
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="category">
+        <img src="/images/LAPTOPS.jpg" alt="" />
+        <div class="category__link">
+          <p>YOUR <span>DREAMS GAMING</span> PC IS HERE ONLY FORM 799$</p>
+          <a href="/EasyTech/laptops">
+            CHECK OUT
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="category">
+        <img src="/images/71aB8k8YYHL.jpg" alt="" />
+        <div class="category__link">
+          <p>LOOKING FOR THE BEST, <span>LOOK NO MORE</span></p>
+          <a href="/EasyTech/components">
+            CHECK OUT
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="category respoCate">
+        <img src="/images/images.jfif" alt="" />
+        <div class="category__link">
+          <p>WINDOWS 10 PRO, <span>LESS THEN 10$</span></p>
+          <a href="#">
+            CHECK OUT
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="store_feature">
+      <div class="Container">
+        <div class="wrapper">
+          <i class="fa-solid fa-truck"></i>
+          <div>
+            <span>Free delivery</span>
+            <p>from 399$</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <i class="fa-regular fa-thumbs-up"></i>
+          <div>
+            <span>99% Positive</span>
+            <p>Comments</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <i class="fa-regular fa-calendar-days"></i>
+          <div>
+            <span>365 days</span>
+            <p>Guarantee</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <i class="fa-solid fa-money-bill-wave"></i>
+          <div>
+            <span>Payements</span>
+            <p>scure system</p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <i class="fa-brands fa-hotjar"></i>
+          <div>
+            <span>Only Premuim</span>
+            <p>Brands</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="bestSeller">
+      <div class="secHeader">
+        <h1>Best seller</h1>
+      </div>
+      <div class="articlesWrapper">
+        <%highSellProducts.forEach(prod=>{%>
+        <article>
+          <!-- prettier-ignore -->
+          <a class="products_title" href=ProdId=<%=prod._id%>>
+            <p><%=prod.Prod_name%></p>
+          </a>
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="product" />
+          </a>
+          <div class="product__detail">
+            <span
+              ><%=prod.sell_price%> $
+              <p><%=prod.price%> $</p></span
+            >
+            <h6 class="inStock">in stock</h6>
+            <div class="add_cart">
+              <a href="/AddCart/ref=<%=prod._id%>">
+                <i class="fa-sharp fa-solid fa-cart-plus"></i>
+              </a>
+            </div>
+            <div class="prod__act">
+              <a href="/AddWishList/ref=<%=prod._id%>">
+                <i class="fa-regular fa-heart"></i>
+                <p>Add to wishlist</p>
+              </a>
+              <a href="ProdId=<%=prod._id%>">
+                <i class="fa-regular fa-eye"></i>
+                <p>Checkout</p>
+              </a>
+            </div>
+          </div>
+        </article>
+        <%})%>
+      </div>
+    </section>
+
+    <div class="degitaProduct">
+      <img
+        src="https://mytech.ma/wp-content/uploads/2021/11/windows-products-thumb.webp"
+        alt="product"
+      />
+      <div class="pro_dtls">
+        <div class="divHeader">
+          <h1>Windows products</h1>
+        </div>
+        <div class="divProduct">
+          <img
+            src="https://mytech.ma/wp-content/uploads/2021/11/windows-products-thumb.webp"
+            alt="product"
+          />
+          <div>
+            <a href="#">
+              <p>Windows 10 Pro Product Key</p>
+            </a>
+            <span>9.99$</span>
+            <h6>in stock</h6>
+            <form action="#">
+              <button>ADD TO CART</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="just4u">
+      <div class="proOneWrapper">
+        <a href="#">
+          <img
+            src="https://mytech.ma/wp-content/uploads/2021/12/two-banner-1.webp"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="proTwoWrapper">
+        <a href="#">
+          <img
+            src="https://mytech.ma/wp-content/uploads/2022/06/smartwatch-banner-1.webp"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+
+    <div class="brandsContainer">
+      <div class="brand">
+        <img
+          src="./images/brands/micro-star-international-logo.svg"
+          alt="brand"
+        />
+      </div>
+      <div class="brand">
+        <img src="./images/brands/microsoft.svg" alt="brand" />
+      </div>
+      <div class="brand">
+        <img src="./images/brands/nintendo-2.svg" alt="brand" />
+      </div>
+      <div class="brand">
+        <img src="./images/brands/razer-1.svg" alt="brand" />
+      </div>
+      <div class="brand">
+        <img src="./images/brands/nvidia.svg" alt="brand" />
+      </div>
+    </div>
+
+    <section id="mixed__products">
+      <div class="newest_products">
+        <div class="cell_header">
+          <span>Newest Products</span>
+        </div>
+        <%latestItems.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+
+      <div class="pupolar_products">
+        <div class="cell_header">
+          <span>Pupolar Products</span>
+        </div>
+        <%chpsProducts.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+
+      <div class="hot_products">
+        <div class="cell_header">
+          <span>On sell Products</span>
+        </div>
+        <%OnsellProds.forEach(prod=>{%>
+        <div class="products_cell">
+          <!-- prettier-ignore -->
+          <a href=ProdId=<%=prod._id%>>
+            <!-- prettier-ignore -->
+            <img
+              src=<%=prod.Prod_images[0]%>
+            alt="Product" />
+          </a>
+          <div class="products_details">
+            <!-- prettier-ignore -->
+            <h1><a href=ProdId=<%=prod._id%>><%=prod.Prod_name%></a></h1>
+            <div>
+              <span><%=prod.sell_price%>$</span>
+              <p><%=prod.price%>$</p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </section>
+
+    <div class="mailContiner">
+      <div>
+        <i class="fa-regular fa-paper-plane"></i>
+        <p>Sign up and never miss our spacial offers</p>
+      </div>
+      <form action="Sub-email" method="post">
+        <div class="container">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+          />
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+    </div>
+
+    <%- include('./includes/footer.ejs'); -%>
+  </body>
+</html>

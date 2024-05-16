@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="/css/wish.css" />
+    <link rel="stylesheet" href="/css/wishDark.css" />
+    <script src="/JavaScript/wishList.js" defer></script>
+    <title>EasyTech</title>
+  </head>
+  <body>
+    <%- include('./includes/nav.ejs'); -%>
+     <form action="/EditOrderDetails" method="post">
+    <div id="wishContainer">
+      <div class="navigation">
+        <a href="/index"><p>Home</p></a>
+        <span class="material-symbols-outlined"> chevron_right </span>
+        <a href="/wishList"><p>Wishlist</p></a>
+      </div>
+      <div class="mainWrapper">
+        <h1>Order(s) details</h1>
+        <%CartProducts.forEach(prd=>{%>
+        <article>
+          <a href="/rmvOrder/ref=<%=prd.ref%>">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
+          <img src="<%=prd.Prod_img[0]%>" alt="product" />
+          <h3 class="title__product"><%=prd.Prod_name%></h3>
+          <p class="init_price"><%=prd.price%>$</p>
+          <input type="number" value="<%=prd.Quantity%>" name="quantity" class="quantity" min="1" />
+          <p class="total"><%=(prd.price *prd.Quantity).toFixed(2)%>$</p>
+        </article>
+        <input type="hidden" name="ref" value="<%=prd.ref%>">
+        <%})%>
+      </div>
+      <div class="fromContiner">
+          <button type="submit">Validate the order</button>
+        </form>
+      </div>
+    </div>
+    <div class="contactUs">
+      <h2>have any questions ?</h2>
+      <p>You can contact EasyTech stuff and ask ANYTHING you want</p>
+      <a href="./contact.html">Let Chat </a>
+    </div>
+
+    <%- include('./includes/footer.ejs'); -%>
+  </body>
+</html>

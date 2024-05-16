@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/logo.png"
+      type="image/x-icon"
+    />
+    <!--* Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!--* Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/53405766b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--* Leafleat -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <!--* CSS -->
+    <link rel="stylesheet" href="/css/Cart.css" />
+    <link rel="stylesheet" href="/css/CartDark.css" />
+    <script src="/JavaScript/Cart.js" defer></script>
+    <title> CART || EasyTech</title>
+  </head>
+  <body>
+       <%- include('./includes/nav.ejs'); -%>
+
+    <body>
+        <section id="mainContainEr">
+            <div class="navigation">
+                <a href="/index"><p>Home</p></a>
+                <span class="material-symbols-outlined"> chevron_right </span>
+                <a href="/Cart"><p>CART</p></a>
+            </div>
+            <h1>Checkout</h1>
+            <div class="mainWrapper">
+                <div class="Billing">
+                  <div class="header">
+                    <h1>Billing Information</h1>
+                  </div>
+                  <form action="/order_checkout" method="post">
+                    <div class="userNameContainer">
+                      <div>
+                          <label for="userName">First name *</label>
+                          <input type="text" name="userName" id="userName" value="<%=User.user_name%>" required>
+                      </div>
+                      <div>
+                          <label for="LastName">Last name </label>
+                          <input type="text" name="LastName" id="LastName">
+                      </div>
+                    </div>
+                    <label for="email">Email * </label>
+                    <input type="email" name="email" id="email" value="<%=User.user_email%>" required >
+                    <label for="text">Address * </label>
+                    <input type="text" name="Address" id="Address"  value="<%=User.address%>" required>
+                    <label for="City">City * </label>
+                    <input type="text" name="City" id="City"  value="<%=User.city%>" required>
+                    <label for="Zip">Zip Code  </label>
+                    <input type="number" name="Zip" id="Zip">
+                    <label for="phoneNumber">phone number * </label>
+                    <input type="number" name="phoneNumber" id="phoneNumber"  value="<%=User.Phone_number%>" required>
+                    <label for="message">Order Notes  (optional)</label>
+                    <textarea name="message" id="message" placeholder="Comments about your order(s)" ></textarea>
+                      <div class="payOpts tremOfUse">
+                    <input type="checkbox" name="policy" id="policy" required>
+                    <span>I have read and accept the general conditions *</span>
+                  </div>
+                  <input type="hidden" name="Order" value="<%=JSON.stringify(CartProducts)%>" >
+                  <button type="submit">Order</button>
+                  </form>
+                </div>
+                <div class="Order">
+                  <div class="header">
+                    <h1>Your order</h1>
+                  <a href="Cart_details">
+                    <i class="fa-solid fa-gear"></i>
+                  </a>
+                  </div>
+                  <div class="struct">
+                    <p>Product(s)</p>
+                    <p>Price</p>
+                  </div>
+                  <%CartProducts.forEach(prod=>{%>
+                  <div class="product_details">
+                    <p>
+                      (x<%=prod.Quantity%>) <%=prod.Prod_name%>
+                    </p>
+                    <span><%=(prod.price*prod.Quantity).toFixed(2) %>$</span>
+                  </div>
+                  <%})%>
+                  <div class="struct TOTAL_Amount">
+                      <p>TOTAL</p>
+                      <p><%=totalPrice%>$</p>
+                  </div>
+                  <div class="payOpts">
+                    <input type="radio" name="delevery" id="delevery" checked>
+                    <span>cash on delivery</span>
+                  </div>
+                  <p>Your personal data will be used to process your order, 
+                      support your experience on this website
+                      and for other purposes described in our privacy policy 
+                 .</p>
+                </div>
+            </div>
+        </section>
+        
+      <%- include('./includes/footer.ejs'); -%>
+    </body>
+    </html>

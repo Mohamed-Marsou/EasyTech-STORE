@@ -65,7 +65,6 @@ nav .search_bar form > button > i {
   font-size: 1.4rem;
   font-weight: bolder;
   margin: 8px 0 5px 0;
-  color: #555;
 }
 nav .header_icons {
   width: 20%;
@@ -724,8 +723,8 @@ nav .resp__serach__barContainer > form > button > i {
 }
 #bestSeller .articlesWrapper article > a > img {
   width: 13rem;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: 10rem;
+  object-fit: contain;
   margin-left: 1.6rem;
 }
 #bestSeller .articlesWrapper article .product__detail {
@@ -1021,8 +1020,7 @@ nav .resp__serach__barContainer > form > button > i {
 #mixed__products > div > .products_cell > a > img {
   width: 5rem;
   height: 5rem;
-  -o-object-fit: cover;
-  object-fit: cover;
+  object-fit: contain;
 }
 #mixed__products > div > .products_cell > .products_details {
   width: 19rem;
@@ -1052,7 +1050,7 @@ nav .resp__serach__barContainer > form > button > i {
 .mailContiner {
   width: 100%;
   height: 6rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   background-color: #f23c48;
   display: flex;
   justify-content: space-around;
